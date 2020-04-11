@@ -1,0 +1,29 @@
+language: python
+python:
+  - "3.6"
+
+before_install:
+  - sudo apt-get update
+  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+    else
+      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+    fi
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - source "$HOME/miniconda/etc/profile.d/conda.sh"
+  - hash -r
+  - conda config --set always_yes yes --set changeps1 no
+  - conda update -q conda
+  - conda info -a
+
+install:
+  - conda create -q -n build-environment python=$TRAVIS_PYTHON_VERSION
+  - conda activate build-environment
+  - conda install -c conda-forge -c plotly --yes --file requirements.txt
+
+script:
+  - make publish github
+
+env:
+  global:
+    secure: EENfgSQ4CRko210D7wH5q+krfrCAvv+ynt6LnHjDsRS4yAVMbQ9wO2DUcVD9jzo8OdWKrlEN9Pz/YovmgVGOusGHuzRSQWvocAHxrxvBR7Zcj25cTZ1xjyN+52B9+9R3xZCWWiCOZ/w5kFAb7oZ8C9v6VAPW8WkrQSKirMsboLHJ50iNrxcTIg4eW5RqwIzFIU1ZKxSmzfxESjE5vuvVoerdvTdf+P2zdaTE5dJ7Ul9/3XpbO58jOzCL8boiIQkueFZpYYSBvbgypD5nElHfR4NPP7krWXVnIHIELWLi0OitRrJ3U6gcY7YglboSf7X6UvvYV6jOhx5F9ioowyDVmA7N3bVebJXlwvhomE3cJ2XU8Ec4dTCrR/InB5P3iDddRTibxRTI8GYZjBdl2E6nX56YvoApyGAJxwvI/IhT+S9Uig+ljKmvAppoGz/w9lrATSpy2BsG8VyoFCU5qTgF2Cytoe97EphNgsUvdM3VhcsHRJh0S6auYOzt2RB2MY6nsOyh5rbVdwYjpU9B7AoqfbhmnN6ltGw173Sv5qJ6dLQZI+BSo6o4kRbKdPv/PQI2qUsWd8Ca3nS8+SUmx6OSApulwsfPl7zp3W91BYZc9yVvNXqo8UHTOUZjm0g+SEuMzLS1Oq4/iJqnz9l9Ds2UOv0lhB0srwK37LXl6m3yN/I=
