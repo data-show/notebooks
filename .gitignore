@@ -69,3 +69,6 @@ pip-delete-this-directory.txt
 # virtualenv
 venv/
 ENV/
+
+# pelican
+output
