@@ -1,0 +1,16 @@
+{% if 'neighbors' in PLUGINS %}
+<div class="content neighbors">
+    {% if article.prev_article %}
+    <a class="pure-button float-left" href="{{ SITEURL }}/{{ article.prev_article.url }}"
+        title="{{ article.prev_article.title|striptags }}">
+        <i class="fa fa-angle-left"></i> {{ _('Previous Post') }}
+    </a>
+    {% endif %}
+    {% if article.next_article %}
+    <a class="pure-button float-right" href="{{ SITEURL }}/{{ article.next_article.url }}"
+        title="{{ article.next_article.title|striptags }}">
+        {{ _('Next Post') }} <i class="fa fa-angle-right"></i>
+    </a>
+    {% endif %}
+</div>
+{% endif %}

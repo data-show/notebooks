@@ -22,7 +22,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-STATIC_PATHS = ['images', 'extra/CNAME']
+STATIC_PATHS = ['static', 'images', 'extra/CNAME']
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},}
 
 # Blogroll
@@ -31,14 +31,17 @@ LINKS = ()
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/DataShow_'),
           ('instagram', 'https://www.instagram.com/datashow_'),
-          ('github', 'https://github.com/data-show'),)
+          ('youtube', 'https://www.youtube.com/channel/UC1siUJqeSI3Zoyj02tw1jgA'),
+          ('github', 'https://github.com/data-show'),
+          ('linkedin', 'https://www.linkedin.com/company/data-show-blog'))
 
 DEFAULT_PAGINATION = 10
 
 MARKUP = ('md', 'ipynb')
 
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+PLUGIN_PATHS = ['./plugins', './plugins/pelican-plugins']
+PLUGINS = ['related_posts', 'neighbors', 'post_stats', 'sitemap', 'ipynb.markup']
+THEME = './'
 
 # if you create jupyter files in the content dir, snapshots are saved with the same
 # metadata. These need to be ignored.
@@ -46,3 +49,22 @@ IGNORE_FILES = ['.ipynb_checkpoints', 'Logo_and_Cover']
 
 # Ipynb
 IPYNB_GENERATE_SUMMARY=False
+
+# Github Corner
+GITHUB_CORNER_URL = 'https://github.com/data-show/notebooks'
+
+# Sitemap
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    },
+    'exclude': ['tag/', 'category/']
+}
