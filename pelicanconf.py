@@ -4,7 +4,9 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Data Show'
 SITENAME = 'Data Show Notebooks'
+SITEDESCRIPTION = 'Data Show makes data visualization notebooks with open data about economics and health topics.'
 SITEURL = ''
+
 
 PATH = 'notebooks'
 
