@@ -1,33 +1,34 @@
 language: python
 python:
-  - "3.6"
-
+- '3.6'
+cache: pip
 branches:
   only:
   - master
-
 before_install:
-  - sudo apt-get update
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
-      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
-    else
-      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-    fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - source "$HOME/miniconda/etc/profile.d/conda.sh"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  - conda info -a
-
+- sudo apt-get update
+- if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+  -O miniconda.sh; else wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  -O miniconda.sh; fi
+- bash miniconda.sh -b -p $HOME/miniconda
+- source "$HOME/miniconda/etc/profile.d/conda.sh"
+- hash -r
+- conda config --set always_yes yes --set changeps1 no
+- conda update -q conda
+- conda info -a
 install:
-  - conda create -q -n build-environment python=$TRAVIS_PYTHON_VERSION
-  - conda activate build-environment
-  - conda install -c conda-forge -c plotly --yes --file requirements.txt
-
+- conda create -q -n build-environment python=$TRAVIS_PYTHON_VERSION
+- conda activate build-environment
+- conda install -c anaconda -c conda-forge -c plotly --yes --file requirements.txt
 script:
-  - make publish github
-
+- make publish
+before_deploy:
+- npm install -g netlify-cli
+deploy:
+  provider: script
+  script: netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_AUTH_TOKEN -p
+  skip_cleanup: true
 env:
   global:
-    secure: EENfgSQ4CRko210D7wH5q+krfrCAvv+ynt6LnHjDsRS4yAVMbQ9wO2DUcVD9jzo8OdWKrlEN9Pz/YovmgVGOusGHuzRSQWvocAHxrxvBR7Zcj25cTZ1xjyN+52B9+9R3xZCWWiCOZ/w5kFAb7oZ8C9v6VAPW8WkrQSKirMsboLHJ50iNrxcTIg4eW5RqwIzFIU1ZKxSmzfxESjE5vuvVoerdvTdf+P2zdaTE5dJ7Ul9/3XpbO58jOzCL8boiIQkueFZpYYSBvbgypD5nElHfR4NPP7krWXVnIHIELWLi0OitRrJ3U6gcY7YglboSf7X6UvvYV6jOhx5F9ioowyDVmA7N3bVebJXlwvhomE3cJ2XU8Ec4dTCrR/InB5P3iDddRTibxRTI8GYZjBdl2E6nX56YvoApyGAJxwvI/IhT+S9Uig+ljKmvAppoGz/w9lrATSpy2BsG8VyoFCU5qTgF2Cytoe97EphNgsUvdM3VhcsHRJh0S6auYOzt2RB2MY6nsOyh5rbVdwYjpU9B7AoqfbhmnN6ltGw173Sv5qJ6dLQZI+BSo6o4kRbKdPv/PQI2qUsWd8Ca3nS8+SUmx6OSApulwsfPl7zp3W91BYZc9yVvNXqo8UHTOUZjm0g+SEuMzLS1Oq4/iJqnz9l9Ds2UOv0lhB0srwK37LXl6m3yN/I=
+  - secure: ttnP8k1nMc37cLagBAiSPBfRZmOyecLfgxV0uZUAV/CqTMkU/pUzAPJQw+YkRfLziGE6wt1YukqlPlrUVxSCQZJ4wtix7LSI7KK8ZTqC1pbKT+kSsL3Zq/9un56HQXG4Bvyaaae8lHIU9vjIE1kKIFmhwL5ZV62lFRE3hrAy8xJ/Uu35wKGyxVmHJnWZUME4R6p8pCfq0fh/MW6CQW+f7X3Dp2+tDmm4gknPpNAoRrLN0DFsFELc0LA9B+NhXXFWrT6gfoQUJkQA1xAT/ub2yxmdLzJOLYCqtqH7t/JWKZ/M2XC54iG9i+gRJCxPpK7YZb2hbYPg1FybmOoyKw0b1h6FpvuWbeBgzvG9YhwP3J2o3fMO9RlBPfcBir8q1/lWjHlvH0aHF7ZKYRR1LGGxnlELwgqEDjecWvzUi1gVBjwZWY/HC2FK4LUK5DuwA4bOQGjtnNofAOjL3DjVbDFls5NosS/b6Yf/APwlSrCwD45F8sAu+Ah8+/5KmuWeiXKs27XA7rrE0Xf5U95gV8oaUFgWj7wSwt/FANsN9mRxq1w8CIqSoD8y46Zy3ezzPrP60YOXZd0RAkn5OyPE20rGpbGWIhmN24c51PfXsCY3hctBE5aSAZmrFuHEcPaJJeroh+pbD9+ZM6yqdFhP3yFiNXzbGlnvESOIoUj5eEwi3C8=
+  - secure: O25aELk1/E9YYCndLZpjsdN95VeHXHD5FAXh9CtfKh3kd3TdzBxgGusejhkF9URmPFRnC3GLhVCLrCR1eYCdn4jr4AY1IjCQBvyDNP7puyUKabJe0UV7L21a8IqVvBWWS2Ch4vNNYXSc4ot9VW3VUy1P2dNWPfTtWoZTimSig3N1fD2KDDucyP8EwAmxP7UzTDVEDJ1k/wA9AVYaFbXivA7j2CIaRttCtzzWLxvFi5GYxoQV6MzjvOFO6oLSZVM4cV1edFWzLyxiHneug9ii5Fqrw05epL7P3Z82ycLGxXB/TgTFiAIvN8hgmhfyXCGYcIfRNaBKj7XnbQDSqOjiVMwVrf2Blwy7Nxucn1ApDaTh124+ATqbHLT7vjTvWRkRyiQWxGu0ayhyDo93TbZ408UZHOeTvRVAFD2xfyWqWSebPU/oXTkfmz2Wr9yKeSaEkdS5U8LIsVKriPxVfElasoeMvssstcq1bTr9KAMNJWAGmCK5BzGYk54hPRoYjEiKFFjmj4jRzE3yIRQ39gD1JMNyZ6rgLVFhHiTUK0fke3ulIiuGfdFf2iyGC4C8Gk9MNXBo064RJVD2zciF2NxTXSgDXk5n/RRVXG8+8JZaX7JaFxgEBEhQ5bVtDd6go1G4uhTImToG6E+O+eRO1KY0fcN9TNcku537t1N9tDXhZQs=

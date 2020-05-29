@@ -28,11 +28,6 @@ STATIC_PATHS = [
     'static',
     'images',
     'extra'
-    # 'extra/CNAME',
-    # 'extra/robots.txt',
-    # 'extra/android-chrome-192x192.png',
-    # 'extra/android-chrome-512x512.png',
-    # 'extra/apple-touch-icon.png',
 ]
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
