@@ -2,6 +2,8 @@ language: python
 python:
   - "3.6"
 
+cache: pip
+
 branches:
   only:
   - master
@@ -23,10 +25,19 @@ before_install:
 install:
   - conda create -q -n build-environment python=$TRAVIS_PYTHON_VERSION
   - conda activate build-environment
-  - conda install -c conda-forge -c plotly --yes --file requirements.txt
+  - conda install -c anaconda -c conda-forge -c plotly --yes --file requirements.txt
 
 script:
-  - make publish github
+  - make publish
+
+
+before_deploy:
+  - npm install netlify-cli -g
+
+deploy:
+  provider: script
+  script: netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p ./output
+  skip_cleanup: true
 
 env:
   global:
