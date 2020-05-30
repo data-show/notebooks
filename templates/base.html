@@ -1,4 +1,5 @@
-{% if 'jinja2.ext.i18n' not in JINJA_ENVIRONMENT.extensions and 'jinja2.ext.i18n' not in JINJA_EXTENSIONS %} {%- macro _(msg) -%} {{ msg % kwargs }} {%- endmacro -%} {% endif %}
+{% if 'jinja2.ext.i18n' not in JINJA_ENVIRONMENT.extensions and 'jinja2.ext.i18n' not in JINJA_EXTENSIONS %}
+{%- macro _(msg) -%} {{ msg % kwargs }} {%- endmacro -%} {% endif %}
 
 <!DOCTYPE html>
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
@@ -10,7 +11,8 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/fontawesome.min.css">
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/brands.min.css">
@@ -58,22 +60,24 @@
                 {% endfor %} {% if DISPLAY_PAGES_ON_MENU -%} {% for pg in pages %}
                 <li class="pure-menu-item{% if pg==page %} active{% endif %}">
                     <a href="{{ SITEURL }}/{{ pg.url }}" class="pure-menu-link">{{ pg.title }}</a>
-                    </li>
-                    {% endfor %} {% endif %} {% if DISPLAY_CATEGORIES_ON_MENU -%} {% for cat, null in categories %}
-                    <li class="pure-menu-item{% if pg==category %} active{% endif %}">
-                        <a href="{{ SITEURL }}/{{ cat.url }}" class="pure-menu-link">{{ cat }}</a>
-                        </li>
-                        {% endfor %} {% endif %}
+                </li>
+                {% endfor %} {% endif %} {% if DISPLAY_CATEGORIES_ON_MENU -%} {% for cat, null in categories %}
+                <li class="pure-menu-item{% if pg==category %} active{% endif %}">
+                    <a href="{{ SITEURL }}/{{ cat.url }}" class="pure-menu-link">{{ cat }}</a>
+                </li>
+                {% endfor %} {% endif %}
             </ul>
 
             <ul class="pure-menu-list float-right social">
                 {% if FEED_ALL_ATOM %}
                 <li class="pure-menu-item">
-                    <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" class="pure-menu-link" type="application/atom+xml" rel="alternate">atom feed</a>
+                    <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+                        class="pure-menu-link" type="application/atom+xml" rel="alternate">atom feed</a>
                 </li>
                 {% endif %} {% if FEED_ALL_RSS %}
                 <li class="pure-menu-item">
-                    <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" class="pure-menu-link" type="application/rss+xml" rel="alternate">rss feed</a>
+                    <a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+                        class="pure-menu-link" type="application/rss+xml" rel="alternate">rss feed</a>
                 </li>
                 {% endif %} {% for name, link in SOCIAL %}
                 <li class="pure-menu-item">
@@ -88,7 +92,8 @@
         {% block content %} {% endblock %}
     </main>
 
-    {% include "partial/jsonld.html" %} {% if GITHUB_CORNER_URL %} {% include 'partial/github.html' %} {% endif %} {% block additional_js %}{% endblock %}
+    {% include "partial/jsonld.html" %} {% if GITHUB_CORNER_URL %} {% include 'partial/github.html' %} {% endif %}
+    {% block additional_js %}{% endblock %}
 </body>
 
 </html>
