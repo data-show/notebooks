@@ -1,16 +1,20 @@
 [[headers]]
   for = "*.js"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, s-max-age=604800"
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, s-max-age=604800"
 [[headers]]
   for = "/theme/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, s-max-age=604800"
 [[headers]]
   for = "*.png"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, s-max-age=86400"
 [[headers]]
-for = "/feeds/*"
-[headers.values]
-Cache-Control = "public, max-age=3600"
+  for = "/feeds/*"
+  [headers.values]
+    Cache-Control = "public, s-max-age=3600"
