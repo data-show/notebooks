@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt-get install -y \
         fonts-liberation \
         xvfb \
-        libgtk2.0-0 \
+        libgtk-3-0 \
         libgconf-2-4 \
         libxtst6 \
         libxss1 \
@@ -26,7 +26,7 @@ RUN apt-get update \
         ffmpeg \
         imagemagick \
         ghostscript \
-    && conda install -c plotly --yes --file /tmp/requirements.txt \
+    && conda install -c plotly pillow --yes --file /tmp/requirements.txt \
     && conda clean --all -f -y \
     && npm cache clean --force \
     && rm -rf /var/lib/apt/lists/* && apt-get clean \
