@@ -1,20 +1,12 @@
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "/theme/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "*.png"
-  [headers.values]
-    Cache-Control = "public, s-max-age=86400"
-[[headers]]
-  for = "/feeds/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=3600"
+/*
+  Cache-Control: public, s-maxage=604800
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: same-origin
+/theme/*"
+  Cache-Control: public, max-age=84600, immutable, s-maxage=31536000
+/*.png"
+  Cache-Control: public, max-age=84600, immutable, s-maxage=31536000
+/feeds/*
+  Cache-Control: public, s-maxage=604800
