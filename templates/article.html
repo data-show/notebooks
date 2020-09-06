@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
 {% block meta %}
+<link rel="canonical" href="{{ SITEURL }}/{{ article.url }}" />
+
 <meta name="author" content="{{ article.author.name }}" />
 <meta name="description" content="{{ article.summary|striptags|escape }}" />
 

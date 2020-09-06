@@ -3,6 +3,8 @@
 {% block meta %}
 {{ super() }}
 
+<link rel="canonical" href="{{ SITEURL }}/{{ page.url }}" />
+
 {% if page.translations -%}
 <link rel="alternate" href="{{ SITEURL }}/{{ page.url }}" hreflang="{{ page.lang }}" />
 {% for p in page.translations %}
