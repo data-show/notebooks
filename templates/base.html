@@ -82,7 +82,7 @@
                 {% endif %} {% for name, link in SOCIAL %}
                 <li class="pure-menu-item">
                     <a class="pure-menu-link sc-{{ name }}" href="{{ link }}" target="_blank">
-                        <i class="{% if name in ['rss'] %}fas{% else %}fab{% endif %} fa-{{ name }}"></i>
+                        <i class="{% if name in ['rss', 'newspaper'] %}fas{% else %}fab{% endif %} fa-{{ name }}"></i>
                     </a>
                 </li>
                 {% endfor %}

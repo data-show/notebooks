@@ -45,7 +45,8 @@ EXTRA_PATH_METADATA = {
 LINKS = ()
 
 # Social widget
-SOCIAL = (('twitter', 'https://twitter.com/DataShow_'),
+SOCIAL = (('newspaper', 'https://www.data-show.com'),
+          ('twitter', 'https://twitter.com/DataShow_'),
           ('instagram', 'https://www.instagram.com/datashow_'),
           ('youtube', 'https://www.youtube.com/channel/UC1siUJqeSI3Zoyj02tw1jgA'),
           ('github', 'https://github.com/data-show'),
