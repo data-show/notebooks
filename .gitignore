@@ -72,3 +72,6 @@ ENV/
 
 # pelican
 output
+
+# Local Netlify folder
+.netlify
