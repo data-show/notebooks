@@ -62,7 +62,7 @@ THEME = './'
 
 # if you create jupyter files in the content dir, snapshots are saved with the same
 # metadata. These need to be ignored.
-IGNORE_FILES = ['.ipynb_checkpoints', 'Logo_and_Cover']
+IGNORE_FILES = ['.ipynb_checkpoints', 'Figures', 'Logo_and_Cover']
 
 # Ipynb
 IPYNB_GENERATE_SUMMARY=False
