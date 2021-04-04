@@ -19,11 +19,6 @@
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/font-awesome/solid.min.css">
 
     <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/main.css">
-    
-    {% if FEED_ALL_ATOM %}
-    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" /> {% endif %} {% if FEED_ALL_RSS %}
-    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" /> {% endif %} {% block extra_head %}{% endblock extra_head %} {% if FAVICON %}
-    {% endif %}
 
     {% if GOOGLE_ANALYTICS %} {% include "partial/ga.html" %} {% endif %}
 
@@ -43,7 +38,9 @@
     <!-- Microsoft EDGE -->
     <meta name="msapplication-TileColor" content="{{ BROWSER_COLOR }}"> {% endif %} {% block meta %}
     <meta name="author" content="{{ AUTHOR }}" />
-    <meta name="description" content="{{ SITEDESCRIPTION }}" /> {% include "partial/og.html" %} {% endblock %}
+    <meta name="description" content="{{ SITEDESCRIPTION }}" />
+    
+    {% include "partial/og.html" %} {% endblock %}
 
     <title>{{ SITENAME }}{% block title %}{% endblock %}</title>
     {% endblock head %}
