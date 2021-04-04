@@ -22,4 +22,4 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 GITHUB_URL='https://github.com/data-show/notebooks'
 TWITTER_USERNAME='DataShow_'
-GOOGLE_ANALYTICS = 'UA-162035849-2'
+GOOGLE_ANALYTICS = 'G-VDKS9XPQW0'
