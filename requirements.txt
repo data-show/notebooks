@@ -12,7 +12,7 @@ networkx==2.5.1
 seaborn==0.10.0
 ipyleaflet==0.13.6
 geopandas==0.9.0
-ipywidgets==7.6.3
+ipywidgets==7.6.4
 pelican==4.6.0
 Pillow==8.1.1
 psutil==5.8.0
