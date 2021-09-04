@@ -6,7 +6,7 @@ pandas-datareader
 scipy==1.6.3
 plotly==4.14.3
 markdown==3.3.4
-matplotlib==3.4.1
+matplotlib==3.4.3
 nbconvert==5.6.1
 networkx==2.5.1
 seaborn==0.10.0
