@@ -3,7 +3,7 @@ ghp-import==1.1.0
 numpy==1.20.2
 pandas==1.2.4
 pandas-datareader
-scipy==1.6.3
+scipy==1.7.1
 plotly==4.14.3
 markdown==3.3.4
 matplotlib==3.4.1
