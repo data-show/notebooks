@@ -1,5 +1,5 @@
 beautifulsoup4==4.9.3
-ghp-import==1.1.0
+ghp-import==2.0.2
 numpy==1.20.2
 pandas==1.2.4
 pandas-datareader
