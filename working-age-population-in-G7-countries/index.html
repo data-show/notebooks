@@ -1,0 +1,1956 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/font-awesome/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/font-awesome/solid.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/main.css">
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VDKS9XPQW0"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VDKS9XPQW0');
+</script> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+ <link rel="canonical" href="https://notebooks.data-show.com/working-age-population-in-G7-countries/" />
+
+<meta name="author" content="Data Show" />
+<meta name="description" content="According to OECD, the working age population corresponds to people aged 15 to 64. This indicator measures the share of the working-age population in the total population. What is the evolution of the working age population indicator in G7 countries over the years ?" />
+
+
+<meta property="og:site_name" content="Data Show Notebooks" />
+<meta property="og:title" content="Working age population in G7 countries" />
+<meta property="og:description" content="According to OECD, the working age population corresponds to people aged 15 to 64. This indicator measures the share of the working-age population in the total population. What is the evolution of the working age population indicator in G7 countries over the years ?" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://notebooks.data-show.com/working-age-population-in-G7-countries/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-01 12:30:00+01:00" />
+<meta property="article:modified_time" content="" />
+<meta property="article:author" content="https://notebooks.data-show.com/author/data-show.html">
+<meta property="article:section" content="Economics" />
+<meta property="og:image" content="">
+
+    <title>Data Show Notebooks &ndash; Working age population in G7 countries</title>
+</head>
+
+<body class="layout">
+    <main class="main">
+        <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable main-menu content">
+            <a href="https://notebooks.data-show.com" class="pure-menu-heading pure-menu-link">Data Show Notebooks</a>
+
+            <ul class="pure-menu-list">
+                   <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/category/economics.html" class="pure-menu-link">Economics</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/category/health.html" class="pure-menu-link">Health</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/category/politics.html" class="pure-menu-link">Politics</a>
+                </li>
+             </ul>
+
+            <ul class="pure-menu-list float-right social">
+                 <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/feeds/all.rss.xml"
+                        class="pure-menu-link" type="application/rss+xml" rel="alternate">rss feed</a>
+                </li>
+                 <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-newspaper" href="https://www.data-show.com" target="_blank">
+                        <i class="fas fa-newspaper"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-twitter" href="https://twitter.com/DataShow_" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-instagram" href="https://www.instagram.com/datashow_" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-youtube" href="https://www.youtube.com/channel/UC1siUJqeSI3Zoyj02tw1jgA" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-github" href="https://github.com/data-show" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-linkedin" href="https://www.linkedin.com/company/data-show-blog" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+    integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+    crossorigin="anonymous"></script>
+
+<article>
+    <header class="header">
+        <h1 id="working-age-population-in-G7-countries">Working age population in G7 countries</h1>
+        <p>
+            Posted on dim. 01 novembre 2020 in <a href="https://notebooks.data-show.com/category/economics.html">Economics</a>
+
+            &#8226; 2 min read
+        </p>
+    </header>
+
+    <div class="content">
+        <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Working-age-population-in-G7-countries">Working age population in G7 countries<a class="anchor-link" href="#Working-age-population-in-G7-countries">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>According to OECD, the working age population corresponds to people aged 15 to 64. This indicator measures the share of the working-age population in the total population. 
+What is the evolution of the working age population indicator in G7 countries over the years ?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Import-required-libraries">Import required libraries<a class="anchor-link" href="#Import-required-libraries">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[111]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Javascript</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+
+<span class="n">Javascript</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;require.config({</span>
+<span class="sd"> paths: { </span>
+<span class="sd">     plotly: &#39;https://cdn.plot.ly/plotly-latest.min&#39;</span>
+<span class="sd"> }</span>
+<span class="sd">});&quot;&quot;&quot;</span>
+<span class="p">)</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;notebook_connected&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-pre-processing">Data pre-processing<a class="anchor-link" href="#Data-pre-processing">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[112]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_working_age_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/Working_Age_Population_in_OECD_Countries.csv&#39;</span><span class="p">,</span> 
+                              <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> 
+                              <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;LOCATION&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+                              <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span>
+                             <span class="p">)</span>
+
+<span class="n">df_working_age_pop_bar</span> <span class="o">=</span> <span class="n">df_working_age_pop</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">df_working_age_pop_bar</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[112]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LOCATION</th>
+      <th>Country</th>
+      <th>TIME</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3753</th>
+      <td>SGP</td>
+      <td>Singapore</td>
+      <td>2011</td>
+      <td>73.885367</td>
+    </tr>
+    <tr>
+      <th>3754</th>
+      <td>SGP</td>
+      <td>Singapore</td>
+      <td>2012</td>
+      <td>73.679962</td>
+    </tr>
+    <tr>
+      <th>3752</th>
+      <td>SGP</td>
+      <td>Singapore</td>
+      <td>2010</td>
+      <td>73.677905</td>
+    </tr>
+    <tr>
+      <th>3755</th>
+      <td>SGP</td>
+      <td>Singapore</td>
+      <td>2013</td>
+      <td>73.478647</td>
+    </tr>
+    <tr>
+      <th>1127</th>
+      <td>KOR</td>
+      <td>Korea</td>
+      <td>2012</td>
+      <td>73.418329</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Plotting">Plotting<a class="anchor-link" href="#Plotting">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Bar-plot">Bar plot<a class="anchor-link" href="#Bar-plot">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig_bar</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_working_age_pop_bar</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;TIME==2020&quot;</span><span class="p">),</span> 
+             <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> 
+             <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span> 
+             <span class="n">hover_name</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> 
+             <span class="n">color</span><span class="o">=</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span>
+             <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">sequential</span><span class="o">.</span><span class="n">Oryel</span><span class="p">,</span> 
+             <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Value&#39;</span><span class="p">:</span><span class="s1">&#39;Working age population (%)&#39;</span><span class="p">,</span> <span class="s1">&#39;Country&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">},</span> 
+             <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;Working age population in 2020 in a selection of countries&lt;/b&gt;&lt;br&gt;&quot;</span> <span class="o">+</span> 
+             <span class="s2">&quot;&lt;i&gt;Source : OECD&lt;/i&gt;&quot;</span>
+            <span class="p">)</span>
+
+<span class="n">fig_bar</span><span class="o">.</span><span class="n">update_coloraxes</span><span class="p">(</span><span class="n">showscale</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Style</span>
+<span class="n">fig_bar</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span>
+    <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">title_font_size</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">xaxis_tickangle</span><span class="o">=-</span><span class="mi">45</span>
+<span class="p">)</span>
+
+<span class="n">fig_bar</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="b7d4aa01-b073-4c16-975a-22e8b0fde332" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("b7d4aa01-b073-4c16-975a-22e8b0fde332")) {
+                    Plotly.newPlot(
+                        'b7d4aa01-b073-4c16-975a-22e8b0fde332',
+                        [{"alignmentgroup": "True", "hovertemplate": "<b>%{hovertext}</b><br><br>=%{x}<br>Working age population (%)=%{marker.color}<extra></extra>", "hovertext": ["Saudi Arabia", "Korea", "China", "Singapore", "Luxembourg", "Costa Rica", "Brazil", "Indonesia", "Chile", "Turkey", "Malta", "G20", "Cyprus", "Slovak Republic", "India", "Iceland", "Russia", "Mexico", "Austria", "Poland", "Switzerland", "Canada", "Colombia", "Spain", "New Zealand", "South Africa", "Ireland", "Hungary", "Romania", "World", "Australia", "Norway", "Lithuania", "OECD - Total", "United States", "Netherlands", "Slovenia", "Croatia", "Germany", "European Union 27", "Portugal", "Argentina", "Belgium", "Czech Republic", "Bulgaria", "Italy", "Denmark", "United Kingdom", "Greece", "Estonia", "Latvia", "Sweden", "Finland", "France", "Israel", "Japan"], "legendgroup": "", "marker": {"color": [72.35733139304841, 72.1473373250616, 70.3199132316979, 70.2643037824445, 69.4652553167527, 69.3783501225256, 69.3045091793802, 68.7453125591146, 68.668121743358, 67.7489529012809, 67.7139061848199, 67.6224340242747, 67.4191445608785, 67.30787584951861, 67.26549981216179, 66.7035054112023, 66.6534516641402, 66.5662839774225, 66.4544578267313, 66.2552364249908, 66.2231260282592, 66.12437211944311, 66.1049580561437, 65.9562100658675, 65.4643081514057, 65.3908583185823, 65.36741857214639, 65.3468412239275, 65.2190748827454, 65.2171266345471, 65.0731593196429, 65.0590987368277, 64.9693190071881, 64.8081975461567, 64.8077758818139, 64.7739013272941, 64.4539422872723, 64.42671146577071, 64.3874714448047, 64.2401603953431, 64.2146868716817, 64.132772097472, 63.943657296146, 63.9227656047973, 63.8780129549763, 63.7721995668696, 63.651356136134304, 63.50172240421221, 63.43267427296221, 63.368582730528296, 63.34343270639339, 62.205416864185494, 61.849428840890205, 61.6208403379512, 59.8854054757952, 59.2579628981449], "coloraxis": "coloraxis"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": ["Saudi Arabia", "Korea", "China", "Singapore", "Luxembourg", "Costa Rica", "Brazil", "Indonesia", "Chile", "Turkey", "Malta", "G20", "Cyprus", "Slovak Republic", "India", "Iceland", "Russia", "Mexico", "Austria", "Poland", "Switzerland", "Canada", "Colombia", "Spain", "New Zealand", "South Africa", "Ireland", "Hungary", "Romania", "World", "Australia", "Norway", "Lithuania", "OECD - Total", "United States", "Netherlands", "Slovenia", "Croatia", "Germany", "European Union 27", "Portugal", "Argentina", "Belgium", "Czech Republic", "Bulgaria", "Italy", "Denmark", "United Kingdom", "Greece", "Estonia", "Latvia", "Sweden", "Finland", "France", "Israel", "Japan"], "xaxis": "x", "y": [72.35733139304841, 72.1473373250616, 70.3199132316979, 70.2643037824445, 69.4652553167527, 69.3783501225256, 69.3045091793802, 68.7453125591146, 68.668121743358, 67.7489529012809, 67.7139061848199, 67.6224340242747, 67.4191445608785, 67.30787584951861, 67.26549981216179, 66.7035054112023, 66.6534516641402, 66.5662839774225, 66.4544578267313, 66.2552364249908, 66.2231260282592, 66.12437211944311, 66.1049580561437, 65.9562100658675, 65.4643081514057, 65.3908583185823, 65.36741857214639, 65.3468412239275, 65.2190748827454, 65.2171266345471, 65.0731593196429, 65.0590987368277, 64.9693190071881, 64.8081975461567, 64.8077758818139, 64.7739013272941, 64.4539422872723, 64.42671146577071, 64.3874714448047, 64.2401603953431, 64.2146868716817, 64.132772097472, 63.943657296146, 63.9227656047973, 63.8780129549763, 63.7721995668696, 63.651356136134304, 63.50172240421221, 63.43267427296221, 63.368582730528296, 63.34343270639339, 62.205416864185494, 61.849428840890205, 61.6208403379512, 59.8854054757952, 59.2579628981449], "yaxis": "y"}],
+                        {"barmode": "relative", "coloraxis": {"colorbar": {"title": {"text": "Working age population (%)"}}, "colorscale": [[0.0, "rgb(236, 218, 154)"], [0.16666666666666666, "rgb(239, 196, 126)"], [0.3333333333333333, "rgb(243, 173, 106)"], [0.5, "rgb(247, 148, 93)"], [0.6666666666666666, "rgb(249, 123, 87)"], [0.8333333333333334, "rgb(246, 99, 86)"], [1.0, "rgb(238, 77, 90)"]], "showscale": false}, "font": {"color": "grey", "family": "Helvetica", "size": 12}, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"size": 20}, "text": "<b>Working age population in 2020 in a selection of countries</b><br><i>Source : OECD</i>"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "tickangle": -45, "title": {"text": ""}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "Working age population (%)"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('b7d4aa01-b073-4c16-975a-22e8b0fde332');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Scatter-plot">Scatter plot<a class="anchor-link" href="#Scatter-plot">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, let's see the evolution of the working age population indicator for G7 countries over the years.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_working_age_pop_scatter</span> <span class="o">=</span> <span class="n">df_working_age_pop</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;LOCATION&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+             
+<span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[114]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LOCATION</th>
+      <th>Country</th>
+      <th>TIME</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2840</th>
+      <td>ARG</td>
+      <td>Argentina</td>
+      <td>1950</td>
+      <td>65.267159</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>AUS</td>
+      <td>Australia</td>
+      <td>1950</td>
+      <td>65.282991</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>AUT</td>
+      <td>Austria</td>
+      <td>1950</td>
+      <td>66.793817</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>BEL</td>
+      <td>Belgium</td>
+      <td>1950</td>
+      <td>68.040421</td>
+    </tr>
+    <tr>
+      <th>2911</th>
+      <td>BGR</td>
+      <td>Bulgaria</td>
+      <td>1950</td>
+      <td>66.487432</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_working_age_pop_us</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;United States&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_working_age_pop_fr</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;France&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_working_age_pop_ca</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;Canada&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_working_age_pop_de</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;Germany&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_working_age_pop_it</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;Italy&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_working_age_pop_uk</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;United Kingdom&#39;&quot;</span><span class="p">)</span>
+<span class="n">df_working_age_pop_jp</span> <span class="o">=</span> <span class="n">df_working_age_pop_scatter</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Country == &#39;Japan&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig_scatter</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_us</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_us</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_us</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_us</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;France&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_fr</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_fr</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_fr</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_fr</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Canada&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_ca</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_ca</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_ca</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_ca</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_uk</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_uk</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_uk</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_uk</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">),</span>   
+    
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Germany&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_de</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_de</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_de</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_de</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">),</span> 
+    
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Italy&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_it</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_it</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_it</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_it</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">),</span>
+    
+    <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Japan&#39;</span><span class="p">,</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">df_working_age_pop_jp</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">],</span> 
+        <span class="n">y</span><span class="o">=</span><span class="n">df_working_age_pop_jp</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">marker_color</span><span class="o">=</span><span class="n">df_working_age_pop_jp</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> 
+        <span class="n">text</span><span class="o">=</span><span class="n">df_working_age_pop_jp</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">])</span>
+
+
+<span class="c1">#Style</span>
+<span class="n">fig_scatter</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;&lt;b&gt;Working age population in G7 countries from 1950 to 2020&lt;/b&gt;&lt;br&gt;&#39;</span> <span class="o">+</span> 
+    <span class="s1">&#39;&lt;i&gt;Source : OECD&lt;/i&gt;&#39;</span><span class="p">,</span>
+    <span class="n">font</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span>
+        <span class="n">size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span>
+    <span class="p">),</span>
+    <span class="n">legend</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">bgcolor</span><span class="o">=</span><span class="s1">&#39;rgba(255, 255, 255, 0)&#39;</span><span class="p">,</span>
+        <span class="n">bordercolor</span><span class="o">=</span><span class="s1">&#39;rgba(255, 255, 255, 0)&#39;</span>
+    <span class="p">),</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Working age population (%)&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig_scatter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+        
+        
+            <div id="e7021992-bcc3-45db-b07c-b67069c945b1" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                require(["plotly"], function(Plotly) {
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("e7021992-bcc3-45db-b07c-b67069c945b1")) {
+                    Plotly.newPlot(
+                        'e7021992-bcc3-45db-b07c-b67069c945b1',
+                        [{"marker": {"color": [64.9347671073423, 64.2921133823047, 63.638343579426206, 63.0058320611312, 62.364453554710394, 61.744061855226, 61.213971346671705, 60.722352114698, 60.4421758811592, 60.0813729419712, 59.73248923328429, 59.365078557998, 59.6004244438754, 59.711396844792205, 59.8338211427889, 60.010038035292304, 60.310258522245704, 60.681873272953304, 61.11222296376, 61.5448478289188, 61.9388575709517, 62.29623387002629, 62.8069705046957, 63.340730352343904, 63.870682328547204, 64.3206673991063, 64.8432497796548, 65.2699915103756, 65.6505154030348, 65.9691034327015, 66.11401206016, 66.2372026524189, 66.2797506037806, 66.282278682306, 66.3476539894841, 66.3967658215943, 66.45910062289799, 66.3684679957174, 66.227030753036, 66.00611589299591, 65.7910438426513, 65.5876230612962, 65.4752470958492, 65.374371378164, 65.3649992791851, 65.4342855373924, 65.5349183281112, 65.71061236065661, 65.887913344222, 66.0431651546311, 66.20761473433821, 66.4031655658772, 66.5935949497998, 66.7392139187038, 66.9216637603326, 67.1189894818734, 67.2629382637528, 67.2984326620581, 67.2190124943156, 67.170761795173, 67.1284352825125, 67.09465576578499, 66.7833421672422, 66.55061800665301, 66.3176992125186, 66.1138776284869, 65.88071495138911, 65.6232512725187, 65.3547436173457, 65.08089531508571, 64.8077758818139]}, "name": "United States", "text": ["United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States", "United States"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [64.9347671073423, 64.2921133823047, 63.638343579426206, 63.0058320611312, 62.364453554710394, 61.744061855226, 61.213971346671705, 60.722352114698, 60.4421758811592, 60.0813729419712, 59.73248923328429, 59.365078557998, 59.6004244438754, 59.711396844792205, 59.8338211427889, 60.010038035292304, 60.310258522245704, 60.681873272953304, 61.11222296376, 61.5448478289188, 61.9388575709517, 62.29623387002629, 62.8069705046957, 63.340730352343904, 63.870682328547204, 64.3206673991063, 64.8432497796548, 65.2699915103756, 65.6505154030348, 65.9691034327015, 66.11401206016, 66.2372026524189, 66.2797506037806, 66.282278682306, 66.3476539894841, 66.3967658215943, 66.45910062289799, 66.3684679957174, 66.227030753036, 66.00611589299591, 65.7910438426513, 65.5876230612962, 65.4752470958492, 65.374371378164, 65.3649992791851, 65.4342855373924, 65.5349183281112, 65.71061236065661, 65.887913344222, 66.0431651546311, 66.20761473433821, 66.4031655658772, 66.5935949497998, 66.7392139187038, 66.9216637603326, 67.1189894818734, 67.2629382637528, 67.2984326620581, 67.2190124943156, 67.170761795173, 67.1284352825125, 67.09465576578499, 66.7833421672422, 66.55061800665301, 66.3176992125186, 66.1138776284869, 65.88071495138911, 65.6232512725187, 65.3547436173457, 65.08089531508571, 64.8077758818139]}, {"marker": {"color": [65.9116437447697, 65.5222324206994, 65.1440200885231, 64.7721258087506, 64.40670943403029, 63.98871023856749, 63.5089364399951, 63.045187675754, 62.6632582589971, 62.3104580862883, 61.991407625406296, 61.85192801542, 61.9981459946546, 62.188719643669, 62.248970770481996, 62.2843762902423, 62.2783512986674, 62.2412933545129, 62.232537719869796, 62.2585050756108, 62.301452948031304, 62.313529360873396, 62.3227678783932, 62.3622432044023, 62.4640666767848, 62.59521615624661, 62.7778355817831, 62.9686022916805, 63.1411920813877, 63.3581554500778, 63.6978291690061, 64.2205318885088, 64.7521076067447, 65.2290994346826, 65.66056302690251, 65.8498978850603, 65.870532554128, 65.9299459178422, 65.9816158010266, 65.9774627946545, 65.88081544837479, 65.67723190081429, 65.53141316245521, 65.4315495641877, 65.3515016011316, 65.2965779952378, 65.2662527992237, 65.24317152012529, 65.1979916751273, 65.1226272106997, 65.04630399649041, 65.0000522372614, 64.98913148460629, 65.0159796783703, 65.0398826707291, 65.0714834739576, 65.1298385828962, 65.13948803939711, 65.04627386756191, 64.895262029347, 64.75349384248901, 64.4819297129731, 64.0609334147037, 63.642793630110596, 63.2100079377855, 62.861157738062, 62.562394694274595, 62.2957618397916, 62.0576242967729, 61.822946724608094, 61.6208403379512]}, "name": "France", "text": ["France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France", "France"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [65.9116437447697, 65.5222324206994, 65.1440200885231, 64.7721258087506, 64.40670943403029, 63.98871023856749, 63.5089364399951, 63.045187675754, 62.6632582589971, 62.3104580862883, 61.991407625406296, 61.85192801542, 61.9981459946546, 62.188719643669, 62.248970770481996, 62.2843762902423, 62.2783512986674, 62.2412933545129, 62.232537719869796, 62.2585050756108, 62.301452948031304, 62.313529360873396, 62.3227678783932, 62.3622432044023, 62.4640666767848, 62.59521615624661, 62.7778355817831, 62.9686022916805, 63.1411920813877, 63.3581554500778, 63.6978291690061, 64.2205318885088, 64.7521076067447, 65.2290994346826, 65.66056302690251, 65.8498978850603, 65.870532554128, 65.9299459178422, 65.9816158010266, 65.9774627946545, 65.88081544837479, 65.67723190081429, 65.53141316245521, 65.4315495641877, 65.3515016011316, 65.2965779952378, 65.2662527992237, 65.24317152012529, 65.1979916751273, 65.1226272106997, 65.04630399649041, 65.0000522372614, 64.98913148460629, 65.0159796783703, 65.0398826707291, 65.0714834739576, 65.1298385828962, 65.13948803939711, 65.04627386756191, 64.895262029347, 64.75349384248901, 64.4819297129731, 64.0609334147037, 63.642793630110596, 63.2100079377855, 62.861157738062, 62.562394694274595, 62.2957618397916, 62.0576242967729, 61.822946724608094, 61.6208403379512]}, {"marker": {"color": [62.7561756140375, 62.022757882203706, 61.5800473880759, 61.1907264524979, 60.7438982622251, 60.281507148650704, 59.884797533311, 59.617723001790104, 59.2473900541975, 59.002907227545606, 58.76011361904101, 58.5109279661895, 58.487894425226294, 58.517857154855896, 58.7113173470348, 59.0038873122577, 59.765439929656296, 60.34285033357321, 60.94070650411221, 61.5277080088788, 62.138495225231, 62.6825240943097, 63.334952557249295, 64.01210984796799, 64.7149687023864, 65.35954829210651, 65.9560624121102, 66.4691408435941, 66.99263867188371, 67.4583819941405, 67.8624734134299, 68.13183687373629, 68.2804419423352, 68.375666741871, 68.4390234206177, 68.45068724248429, 68.49781446772329, 68.3718750851953, 68.260602789359, 68.1686999649995, 68.02633391231521, 67.8713376623099, 67.7009561505614, 67.6057993714015, 67.6025786031168, 67.64423120074039, 67.69681668672621, 67.79202919766999, 67.8909452782778, 68.0785773338667, 68.2759901752378, 68.4954647675944, 68.6984972199847, 68.86365414668451, 69.04177137256579, 69.2605572310395, 69.3991165316915, 69.4648929240073, 69.4486150649208, 69.4028632222379, 69.3391500263389, 69.1780340022961, 68.84495639856189, 68.48316991778971, 68.12880503343429, 67.7447282445452, 67.3581848448858, 67.0350287225756, 66.7563339369367, 66.47933317202829, 66.12437211944311]}, "name": "Canada", "text": ["Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada", "Canada"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [62.7561756140375, 62.022757882203706, 61.5800473880759, 61.1907264524979, 60.7438982622251, 60.281507148650704, 59.884797533311, 59.617723001790104, 59.2473900541975, 59.002907227545606, 58.76011361904101, 58.5109279661895, 58.487894425226294, 58.517857154855896, 58.7113173470348, 59.0038873122577, 59.765439929656296, 60.34285033357321, 60.94070650411221, 61.5277080088788, 62.138495225231, 62.6825240943097, 63.334952557249295, 64.01210984796799, 64.7149687023864, 65.35954829210651, 65.9560624121102, 66.4691408435941, 66.99263867188371, 67.4583819941405, 67.8624734134299, 68.13183687373629, 68.2804419423352, 68.375666741871, 68.4390234206177, 68.45068724248429, 68.49781446772329, 68.3718750851953, 68.260602789359, 68.1686999649995, 68.02633391231521, 67.8713376623099, 67.7009561505614, 67.6057993714015, 67.6025786031168, 67.64423120074039, 67.69681668672621, 67.79202919766999, 67.8909452782778, 68.0785773338667, 68.2759901752378, 68.4954647675944, 68.6984972199847, 68.86365414668451, 69.04177137256579, 69.2605572310395, 69.3991165316915, 69.4648929240073, 69.4486150649208, 69.4028632222379, 69.3391500263389, 69.1780340022961, 68.84495639856189, 68.48316991778971, 68.12880503343429, 67.7447282445452, 67.3581848448858, 67.0350287225756, 66.7563339369367, 66.47933317202829, 66.12437211944311]}, {"marker": {"color": [66.78043837789039, 66.47982703110691, 66.24307909078681, 66.094393218574, 65.8700300618478, 65.7334808609277, 65.4565897657987, 65.218635435032, 65.1164993417607, 65.0740920135977, 64.9898530031055, 64.854218072405, 65.08660821720899, 65.12253205211799, 64.9536008966868, 64.68178419676791, 64.3690043381924, 64.00305574552921, 63.682358793469895, 63.3650754492743, 63.1256311624158, 62.672008390500096, 62.515915158397, 62.4493816068839, 62.468252785306504, 62.582626334802896, 62.8323483934439, 63.1447621112047, 63.4426842168268, 63.7520487400679, 64.0491735146412, 64.3718585350114, 64.7703455015873, 65.2352345866321, 65.6542241675743, 65.6066494376918, 65.6259901963232, 65.60057311499311, 65.52862539840861, 65.39012210131989, 65.2682744158624, 65.0633132828417, 64.83925457062861, 64.6875052901044, 64.66416168982329, 64.6926842435077, 64.7461004222275, 64.78002314665841, 64.8377733348111, 64.9613209991809, 65.1675961027452, 65.3553812919984, 65.5255055880185, 65.6824270278575, 65.8250632139615, 66.0316633052642, 66.2596998142291, 66.359826856488, 66.3062130858014, 66.1839067558837, 66.03553733799089, 65.9092366778965, 65.380024151939, 64.9967614401064, 64.681900724668, 64.4571587844663, 64.216887525714, 63.96606226183739, 63.7588565158262, 63.5672076361375, 63.50172240421221]}, "name": "United Kingdom", "text": ["United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom", "United Kingdom"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [66.78043837789039, 66.47982703110691, 66.24307909078681, 66.094393218574, 65.8700300618478, 65.7334808609277, 65.4565897657987, 65.218635435032, 65.1164993417607, 65.0740920135977, 64.9898530031055, 64.854218072405, 65.08660821720899, 65.12253205211799, 64.9536008966868, 64.68178419676791, 64.3690043381924, 64.00305574552921, 63.682358793469895, 63.3650754492743, 63.1256311624158, 62.672008390500096, 62.515915158397, 62.4493816068839, 62.468252785306504, 62.582626334802896, 62.8323483934439, 63.1447621112047, 63.4426842168268, 63.7520487400679, 64.0491735146412, 64.3718585350114, 64.7703455015873, 65.2352345866321, 65.6542241675743, 65.6066494376918, 65.6259901963232, 65.60057311499311, 65.52862539840861, 65.39012210131989, 65.2682744158624, 65.0633132828417, 64.83925457062861, 64.6875052901044, 64.66416168982329, 64.6926842435077, 64.7461004222275, 64.78002314665841, 64.8377733348111, 64.9613209991809, 65.1675961027452, 65.3553812919984, 65.5255055880185, 65.6824270278575, 65.8250632139615, 66.0316633052642, 66.2596998142291, 66.359826856488, 66.3062130858014, 66.1839067558837, 66.03553733799089, 65.9092366778965, 65.380024151939, 64.9967614401064, 64.681900724668, 64.4571587844663, 64.216887525714, 63.96606226183739, 63.7588565158262, 63.5672076361375, 63.50172240421221]}, {"marker": {"color": [67.29849985390099, 67.18528408357221, 67.31810225841471, 67.5094554699539, 67.7966202064586, 68.1321237072065, 68.3839608780814, 68.2393813807448, 67.9246257010827, 67.6758901692433, 67.2372316890045, 66.5901887729245, 66.00062489035071, 65.51848884302771, 65.0369648358412, 64.6370133881188, 64.243495042729, 63.7628230057378, 63.3944063929156, 63.2533625699225, 63.1323581890253, 63.039067745188895, 63.0841298818315, 63.24422443348001, 63.428906872477796, 63.639955001397894, 63.977244811732994, 64.3584740920503, 64.7775930337186, 65.28227037552871, 65.9141967277576, 66.7252895830502, 67.6130898212274, 68.4783835774506, 69.1395649363805, 69.42343399187679, 69.4836665742929, 69.4729927779987, 69.363779721385, 69.1970114417436, 68.97902326127941, 68.7671008566374, 68.6507236172245, 68.52615804590961, 68.37848229383239, 68.2858255448471, 68.25058206185221, 68.2397788011243, 68.2424714643207, 68.1512745339865, 67.9366540211934, 67.7256419149666, 67.5476166112042, 67.3610937529817, 67.0887793907499, 66.768258261447, 66.4584975363164, 66.2431331450579, 66.1012713211141, 65.9396106395439, 65.9379069912817, 65.8445923518811, 65.9471971105401, 65.9663400131972, 65.87493013150561, 65.74913723924, 65.5491857433664, 65.2541575426159, 64.9868703979992, 64.7044205599228, 64.3874714448047]}, "name": "Germany", "text": ["Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany", "Germany"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [67.29849985390099, 67.18528408357221, 67.31810225841471, 67.5094554699539, 67.7966202064586, 68.1321237072065, 68.3839608780814, 68.2393813807448, 67.9246257010827, 67.6758901692433, 67.2372316890045, 66.5901887729245, 66.00062489035071, 65.51848884302771, 65.0369648358412, 64.6370133881188, 64.243495042729, 63.7628230057378, 63.3944063929156, 63.2533625699225, 63.1323581890253, 63.039067745188895, 63.0841298818315, 63.24422443348001, 63.428906872477796, 63.639955001397894, 63.977244811732994, 64.3584740920503, 64.7775930337186, 65.28227037552871, 65.9141967277576, 66.7252895830502, 67.6130898212274, 68.4783835774506, 69.1395649363805, 69.42343399187679, 69.4836665742929, 69.4729927779987, 69.363779721385, 69.1970114417436, 68.97902326127941, 68.7671008566374, 68.6507236172245, 68.52615804590961, 68.37848229383239, 68.2858255448471, 68.25058206185221, 68.2397788011243, 68.2424714643207, 68.1512745339865, 67.9366540211934, 67.7256419149666, 67.5476166112042, 67.3610937529817, 67.0887793907499, 66.768258261447, 66.4584975363164, 66.2431331450579, 66.1012713211141, 65.9396106395439, 65.9379069912817, 65.8445923518811, 65.9471971105401, 65.9663400131972, 65.87493013150561, 65.74913723924, 65.5491857433664, 65.2541575426159, 64.9868703979992, 64.7044205599228, 64.3874714448047]}, {"marker": {"color": [65.4236802517052, 65.6928025376739, 65.7535875505842, 65.9296152072462, 66.1064202258662, 66.2704279824404, 66.36123195366869, 66.3193048586261, 66.238232351005, 66.1072263298822, 65.9229148961524, 65.87111061078879, 65.9517916788065, 66.00743499704221, 65.92858475077091, 65.7352186246266, 65.5021518433593, 65.22003416871199, 64.9702978402215, 64.7488869358761, 64.5346723645316, 64.34918381962339, 64.17379893785271, 63.9786412787033, 63.7998638018235, 63.718352189144404, 63.7337565386547, 63.7960170676625, 63.9268261488859, 64.1945550026413, 64.57863358526, 65.117968009231, 65.7896103744055, 66.5007751563024, 67.1671840850297, 67.56057764669771, 67.78648769385529, 68.02252134979979, 68.21650951301, 68.3959853880004, 68.5508968129844, 68.8690343275676, 69.06486280861141, 68.9527907630202, 68.8261275715386, 68.618836565516, 68.3685213714833, 68.14698923302849, 67.9337988481646, 67.70176411277221, 67.4457257536022, 67.1979748451374, 66.9413811284719, 66.724702912604, 66.507156770528, 66.2054966035196, 65.93652454287441, 65.7968522053493, 65.7142942068899, 65.600894735824, 65.5099511024868, 65.3089857597711, 65.00313176785531, 64.7240773651298, 64.4556343735223, 64.2608379311972, 64.1341893117916, 64.0469739686779, 63.9821931600828, 63.8771046135536, 63.7721995668696]}, "name": "Italy", "text": ["Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy", "Italy"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [65.4236802517052, 65.6928025376739, 65.7535875505842, 65.9296152072462, 66.1064202258662, 66.2704279824404, 66.36123195366869, 66.3193048586261, 66.238232351005, 66.1072263298822, 65.9229148961524, 65.87111061078879, 65.9517916788065, 66.00743499704221, 65.92858475077091, 65.7352186246266, 65.5021518433593, 65.22003416871199, 64.9702978402215, 64.7488869358761, 64.5346723645316, 64.34918381962339, 64.17379893785271, 63.9786412787033, 63.7998638018235, 63.718352189144404, 63.7337565386547, 63.7960170676625, 63.9268261488859, 64.1945550026413, 64.57863358526, 65.117968009231, 65.7896103744055, 66.5007751563024, 67.1671840850297, 67.56057764669771, 67.78648769385529, 68.02252134979979, 68.21650951301, 68.3959853880004, 68.5508968129844, 68.8690343275676, 69.06486280861141, 68.9527907630202, 68.8261275715386, 68.618836565516, 68.3685213714833, 68.14698923302849, 67.9337988481646, 67.70176411277221, 67.4457257536022, 67.1979748451374, 66.9413811284719, 66.724702912604, 66.507156770528, 66.2054966035196, 65.93652454287441, 65.7968522053493, 65.7142942068899, 65.600894735824, 65.5099511024868, 65.3089857597711, 65.00313176785531, 64.7240773651298, 64.4556343735223, 64.2608379311972, 64.1341893117916, 64.0469739686779, 63.9821931600828, 63.8771046135536, 63.7721995668696]}, {"marker": {"color": [59.645834681532094, 59.942062591401, 60.2941501211882, 60.6713671603644, 60.8880796435227, 61.2447158026424, 61.9744801740812, 62.760553817987606, 63.418124399434205, 64.0655335030049, 64.1234191695725, 64.2918607705319, 65.26932987813129, 66.344081380376, 67.35824686576291, 67.98191581890279, 68.6415631438917, 68.878020663404, 69.0043788555731, 69.0027258408944, 68.9045833594444, 68.70559095193211, 68.4633607509643, 68.1700056826514, 67.9181635661509, 67.7495567857046, 67.55328134118521, 67.4036806376735, 67.3280371560031, 67.3027919590203, 67.3863797624604, 67.2457490118912, 67.47558621386699, 67.71155718779279, 68.0126229167533, 68.18261323977251, 68.5184818346211, 68.8585565981397, 69.2378451260744, 69.5662180917982, 69.6806543376457, 69.77947075366029, 69.7823837774049, 69.7527381581264, 69.6080597134076, 69.4882074213664, 69.25037262442, 68.9884334923831, 68.7196100754234, 68.483232559241, 68.052690420185, 67.6709272454455, 67.25467885588729, 66.92263691143171, 66.6285526326094, 66.0744434948239, 65.5325281528382, 64.9711910022891, 64.4510085415848, 63.910679053596105, 63.8264931481638, 63.6483984692895, 62.8752264325054, 62.067370552258794, 61.2599669200387, 60.806257567927, 60.3168061278926, 59.9515090854663, 59.6716881052818, 59.50189189010101, 59.2579628981449]}, "name": "Japan", "text": ["Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan", "Japan"], "type": "scatter", "x": [1950, 1951, 1952, 1953, 1954, 1955, 1956, 1957, 1958, 1959, 1960, 1961, 1962, 1963, 1964, 1965, 1966, 1967, 1968, 1969, 1970, 1971, 1972, 1973, 1974, 1975, 1976, 1977, 1978, 1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020], "y": [59.645834681532094, 59.942062591401, 60.2941501211882, 60.6713671603644, 60.8880796435227, 61.2447158026424, 61.9744801740812, 62.760553817987606, 63.418124399434205, 64.0655335030049, 64.1234191695725, 64.2918607705319, 65.26932987813129, 66.344081380376, 67.35824686576291, 67.98191581890279, 68.6415631438917, 68.878020663404, 69.0043788555731, 69.0027258408944, 68.9045833594444, 68.70559095193211, 68.4633607509643, 68.1700056826514, 67.9181635661509, 67.7495567857046, 67.55328134118521, 67.4036806376735, 67.3280371560031, 67.3027919590203, 67.3863797624604, 67.2457490118912, 67.47558621386699, 67.71155718779279, 68.0126229167533, 68.18261323977251, 68.5184818346211, 68.8585565981397, 69.2378451260744, 69.5662180917982, 69.6806543376457, 69.77947075366029, 69.7823837774049, 69.7527381581264, 69.6080597134076, 69.4882074213664, 69.25037262442, 68.9884334923831, 68.7196100754234, 68.483232559241, 68.052690420185, 67.6709272454455, 67.25467885588729, 66.92263691143171, 66.6285526326094, 66.0744434948239, 65.5325281528382, 64.9711910022891, 64.4510085415848, 63.910679053596105, 63.8264931481638, 63.6483984692895, 62.8752264325054, 62.067370552258794, 61.2599669200387, 60.806257567927, 60.3168061278926, 59.9515090854663, 59.6716881052818, 59.50189189010101, 59.2579628981449]}],
+                        {"font": {"color": "grey", "family": "Helvetica", "size": 14}, "legend": {"bgcolor": "rgba(255, 255, 255, 0)", "bordercolor": "rgba(255, 255, 255, 0)", "x": 1, "y": 1}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "<b>Working age population in G7 countries from 1950 to 2020</b><br><i>Source : OECD</i>"}, "yaxis": {"title": {"text": "Working age population (%)"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('e7021992-bcc3-45db-b07c-b67069c945b1');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                });
+            </script>
+        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sources">Sources<a class="anchor-link" href="#Sources">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>OCDE.Stat data :</p>
+<ul>
+<li><a href="https://data.oecd.org/pop/working-age-population.htm">Working age population indicator</a> : 
+OECD (2021), Working age population (indicator). doi: 10.1787/d339918b-en (Accessed on 28 October 2021)</li>
+</ul>
+
+</div>
+</div>
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+    </div>
+
+    <div class="content tag-cloud">
+        <p>
+        </p>
+    </div>
+
+<div class="content neighbors">
+    <a class="pure-button float-left" href="https://notebooks.data-show.com/labour-productivity-in-OECD-countries/"
+        title="Labour productivity in OECD countries">
+        <i class="fa fa-angle-left"></i> Previous Post
+    </a>
+</div>
+
+</article>
+    </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Data Show Notebooks ",
+  "url" : "https://notebooks.data-show.com",
+  "image": "",
+  "description": "Data Show makes data visualization notebooks with open data about economics and health topics."
+}
+</script>  <a href="https://github.com/data-show/notebooks" class="github-corner" aria-label="View source on Github">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+        style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+            fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm">
+        </path>
+        <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor" class="octo-body">
+        </path>
+    </svg>
+</a>
+<style>
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+
+    @keyframes octocat-wave {
+
+        0%,
+        100% {
+            transform: rotate(0)
+        }
+
+        20%,
+        60% {
+            transform: rotate(-25deg)
+        }
+
+        40%,
+        80% {
+            transform: rotate(10deg)
+        }
+    }
+
+    @media (max-width:500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style> </body>
+
+</html>

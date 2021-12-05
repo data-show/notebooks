@@ -1,0 +1,3 @@
+Sitemap: https://notebooks.data-show.com/sitemap.xml
+User-agent: *
+Disallow:

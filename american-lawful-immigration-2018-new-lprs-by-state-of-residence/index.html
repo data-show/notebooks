@@ -1,0 +1,3209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/font-awesome/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/font-awesome/solid.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://notebooks.data-show.com/theme/main.css">
+
+ <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VDKS9XPQW0"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VDKS9XPQW0');
+</script> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+ <link rel="canonical" href="https://notebooks.data-show.com/american-lawful-immigration-2018-new-lprs-by-state-of-residence/" />
+
+<meta name="author" content="Data Show" />
+<meta name="description" content="Legal Permanent Residents (LPRs) are non-citizens who are lawfully authorized to live permanently within the United States. Let&#39;s explore data from the U.S. Department of Homeland Security to highlight the states in which people who received a green card in 2018 settled." />
+
+
+<meta property="og:site_name" content="Data Show Notebooks" />
+<meta property="og:title" content="American Lawful Immigration 2018 : New LPRs by State of Residence" />
+<meta property="og:description" content="Legal Permanent Residents (LPRs) are non-citizens who are lawfully authorized to live permanently within the United States. Let&#39;s explore data from the U.S. Department of Homeland Security to highlight the states in which people who received a green card in 2018 settled." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://notebooks.data-show.com/american-lawful-immigration-2018-new-lprs-by-state-of-residence/" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-13 14:30:00+02:00" />
+<meta property="article:modified_time" content="" />
+<meta property="article:author" content="https://notebooks.data-show.com/author/data-show.html">
+<meta property="article:section" content="Politics" />
+<meta property="og:image" content="">
+
+    <title>Data Show Notebooks &ndash; American Lawful Immigration 2018 : New LPRs by State of Residence</title>
+</head>
+
+<body class="layout">
+    <main class="main">
+        <nav class="pure-menu pure-menu-horizontal pure-menu-scrollable main-menu content">
+            <a href="https://notebooks.data-show.com" class="pure-menu-heading pure-menu-link">Data Show Notebooks</a>
+
+            <ul class="pure-menu-list">
+                   <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/category/economics.html" class="pure-menu-link">Economics</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/category/health.html" class="pure-menu-link">Health</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/category/politics.html" class="pure-menu-link">Politics</a>
+                </li>
+             </ul>
+
+            <ul class="pure-menu-list float-right social">
+                 <li class="pure-menu-item">
+                    <a href="https://notebooks.data-show.com/feeds/all.rss.xml"
+                        class="pure-menu-link" type="application/rss+xml" rel="alternate">rss feed</a>
+                </li>
+                 <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-newspaper" href="https://www.data-show.com" target="_blank">
+                        <i class="fas fa-newspaper"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-twitter" href="https://twitter.com/DataShow_" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-instagram" href="https://www.instagram.com/datashow_" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-youtube" href="https://www.youtube.com/channel/UC1siUJqeSI3Zoyj02tw1jgA" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-github" href="https://github.com/data-show" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link sc-linkedin" href="https://www.linkedin.com/company/data-show-blog" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+    integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+    crossorigin="anonymous"></script>
+
+<article>
+    <header class="header">
+        <h1 id="american-lawful-immigration-2018-new-lprs-by-state-of-residence">American Lawful Immigration 2018 : New LPRs by State of Residence</h1>
+        <p>
+            Posted on mar. 13 octobre 2020 in <a href="https://notebooks.data-show.com/category/politics.html">Politics</a>
+
+            &#8226; 7 min read
+        </p>
+    </header>
+
+    <div class="content">
+        <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="American-Lawful-Immigration-2018---New-LPRs-by-State-of-Residence">American Lawful Immigration 2018 - New LPRs by State of Residence<a class="anchor-link" href="#American-Lawful-Immigration-2018---New-LPRs-by-State-of-Residence">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Legal Permanent Residents (LPRs) are non-citizens who are lawfully authorized to live permanently within the United States. Let's explore data from the U.S. Department of Homeland Security to highlight the states in which people who received a green card in 2018 settled.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Import-required-libraries">Import required libraries<a class="anchor-link" href="#Import-required-libraries">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Javascript</span>
+
+<span class="n">Javascript</span><span class="p">(</span>
+<span class="sd">&quot;&quot;&quot;require.config({</span>
+<span class="sd"> paths: { </span>
+<span class="sd">     plotly: &#39;https://cdn.plot.ly/plotly-latest.min&#39;</span>
+<span class="sd"> }</span>
+<span class="sd">});&quot;&quot;&quot;</span>
+<span class="p">)</span>
+
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;notebook_connected&#39;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Data-pre-processing">Data pre-processing<a class="anchor-link" href="#Data-pre-processing">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To map the figures of american new Legal Permanent Residents by state of residence in 2018, we need to merge three datasets :</p>
+<ul>
+<li>The Persons Obtaining Legal Permanent Resident Status by State or Territory of Residence dataset, which is our main dataset containing among other things for each state of residence the number of new LPRs in 2018;</li>
+<li>The US State Abbreviations dataset, which allows us to merge, for each state of residence, the associated state abreviation;</li>
+<li>The US Population 2018 dataset, which gives us the numbers of inhabitants of each US state in 2018.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="LPRs-2018-by-state-of-residence-dataset">LPRs 2018 by state of residence dataset<a class="anchor-link" href="#LPRs-2018-by-state-of-residence-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/Persons_Obtaining_Lawful_Permanent_Resident_Status_by_State_or_Territory_of_Residence.csv&#39;</span><span class="p">,</span> 
+                 <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> 
+                 <span class="n">skiprows</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Cleaning</span>
+<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">,</span> <span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State or territory of residence</th>
+      <th>LPRs 2018</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>3737</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>1375</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>18335</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>3000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>200897</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="US-State-Abbreviations-dataset">US State Abbreviations dataset<a class="anchor-link" href="#US-State-Abbreviations-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_state</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/US_State_Abbreviations.csv&#39;</span><span class="p">,</span> 
+                       <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+<span class="n">df_state</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;State&#39;</span><span class="p">:</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df_state</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State or territory of residence</th>
+      <th>Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>AL</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>AK</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>AZ</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>AR</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>CA</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="US-Population-2018-dataset">US Population 2018 dataset<a class="anchor-link" href="#US-Population-2018-dataset">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_pop</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Data/US_Population_2018.csv&#39;</span><span class="p">,</span> 
+                     <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> 
+                     <span class="n">skiprows</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># Cleaning</span>
+<span class="n">df_pop</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">df_pop</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">11</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">df_pop</span> <span class="o">=</span> <span class="n">df_pop</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">df_pop</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">,</span> <span class="s1">&#39;US Population 2018&#39;</span><span class="p">]</span>
+<span class="n">df_pop</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_pop</span><span class="p">[</span><span class="s1">&#39;US Population 2018&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pop</span><span class="p">[</span><span class="s1">&#39;US Population 2018&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="n">df_pop</span><span class="p">[</span><span class="s1">&#39;US Population 2018&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_pop</span><span class="p">[</span><span class="s1">&#39;US Population 2018&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+
+<span class="n">df_pop</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State or territory of residence</th>
+      <th>US Population 2018</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>4887681</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>735139</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>7158024</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>3009733</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>39461588</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Merging">Merging<a class="anchor-link" href="#Merging">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now our three datasets are clean, they can be merged. To this, we add two columns that will make the data more meaningful :</p>
+<ul>
+<li>The percentage of new LPRs 2018;</li>
+<li>The new LPRs 2018 per 1,000 population.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Merge LPRs 2018 by state of residence and US State Abbreviations datasets</span>
+<span class="n">df_merge</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df_state</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">)</span>
+
+<span class="c1">#Compute and add Percentage of LPRs 2018 column</span>
+<span class="n">df_merge</span><span class="p">[</span><span class="s1">&#39;Percentage of LPRs 2018&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merge</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df_merge</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span>
+
+<span class="c1">#Merge US Population 2018 dataset to the previous merge, giving us our final dataset</span>
+<span class="n">df_LPRs_2018</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_merge</span><span class="p">,</span> <span class="n">df_pop</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">)</span>
+
+<span class="c1">#Compute and add LPRs 2018 per 1,000 population column</span>
+<span class="n">df_LPRs_2018</span><span class="p">[</span><span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_LPRs_2018</span><span class="p">[</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df_LPRs_2018</span><span class="p">[</span><span class="s1">&#39;US Population 2018&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">1000</span>
+
+<span class="n">df_LPRs_2018</span> <span class="o">=</span> <span class="n">df_LPRs_2018</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_LPRs_2018</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State or territory of residence</th>
+      <th>LPRs 2018</th>
+      <th>Code</th>
+      <th>Percentage of LPRs 2018</th>
+      <th>US Population 2018</th>
+      <th>LPRs 2018 per 1,000 population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>200897</td>
+      <td>CA</td>
+      <td>18.350529</td>
+      <td>39461588</td>
+      <td>5.090951</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>New York</td>
+      <td>134839</td>
+      <td>NY</td>
+      <td>12.316595</td>
+      <td>19530351</td>
+      <td>6.904075</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Florida</td>
+      <td>130405</td>
+      <td>FL</td>
+      <td>11.911580</td>
+      <td>21244317</td>
+      <td>6.138347</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Texas</td>
+      <td>104515</td>
+      <td>TX</td>
+      <td>9.546711</td>
+      <td>28628666</td>
+      <td>3.650711</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>New Jersey</td>
+      <td>54424</td>
+      <td>NJ</td>
+      <td>4.971250</td>
+      <td>8886025</td>
+      <td>6.124673</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Illinois</td>
+      <td>38287</td>
+      <td>IL</td>
+      <td>3.497248</td>
+      <td>12723071</td>
+      <td>3.009258</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Massachusetts</td>
+      <td>33174</td>
+      <td>MA</td>
+      <td>3.030212</td>
+      <td>6882635</td>
+      <td>4.819956</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Virginia</td>
+      <td>27426</td>
+      <td>VA</td>
+      <td>2.505172</td>
+      <td>8501286</td>
+      <td>3.226100</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Georgia</td>
+      <td>26725</td>
+      <td>GA</td>
+      <td>2.441141</td>
+      <td>10511131</td>
+      <td>2.542543</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Pennsylvania</td>
+      <td>26078</td>
+      <td>PA</td>
+      <td>2.382042</td>
+      <td>12800922</td>
+      <td>2.037197</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Washington</td>
+      <td>26029</td>
+      <td>WA</td>
+      <td>2.377566</td>
+      <td>7523869</td>
+      <td>3.459523</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Maryland</td>
+      <td>24301</td>
+      <td>MD</td>
+      <td>2.219726</td>
+      <td>6035802</td>
+      <td>4.026143</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>North Carolina</td>
+      <td>20838</td>
+      <td>NC</td>
+      <td>1.903405</td>
+      <td>10381615</td>
+      <td>2.007202</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Michigan</td>
+      <td>19850</td>
+      <td>MI</td>
+      <td>1.813158</td>
+      <td>9984072</td>
+      <td>1.988167</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Ohio</td>
+      <td>18809</td>
+      <td>OH</td>
+      <td>1.718070</td>
+      <td>11676341</td>
+      <td>1.610864</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>18335</td>
+      <td>AZ</td>
+      <td>1.674773</td>
+      <td>7158024</td>
+      <td>2.561461</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Minnesota</td>
+      <td>16721</td>
+      <td>MN</td>
+      <td>1.527346</td>
+      <td>5606249</td>
+      <td>2.982565</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Colorado</td>
+      <td>13913</td>
+      <td>CO</td>
+      <td>1.270855</td>
+      <td>5691287</td>
+      <td>2.444614</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Connecticut</td>
+      <td>11629</td>
+      <td>CT</td>
+      <td>1.062227</td>
+      <td>3571520</td>
+      <td>3.256037</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Nevada</td>
+      <td>10851</td>
+      <td>NV</td>
+      <td>0.991163</td>
+      <td>3027341</td>
+      <td>3.584334</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Indiana</td>
+      <td>9741</td>
+      <td>IN</td>
+      <td>0.889772</td>
+      <td>6695497</td>
+      <td>1.454858</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Oregon</td>
+      <td>9679</td>
+      <td>OR</td>
+      <td>0.884109</td>
+      <td>4181886</td>
+      <td>2.314506</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Tennessee</td>
+      <td>9590</td>
+      <td>TN</td>
+      <td>0.875979</td>
+      <td>6771631</td>
+      <td>1.416202</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Kentucky</td>
+      <td>8734</td>
+      <td>KY</td>
+      <td>0.797790</td>
+      <td>4461153</td>
+      <td>1.957790</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Missouri</td>
+      <td>7638</td>
+      <td>MO</td>
+      <td>0.697678</td>
+      <td>6121623</td>
+      <td>1.247708</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Wisconsin</td>
+      <td>7433</td>
+      <td>WI</td>
+      <td>0.678952</td>
+      <td>5807406</td>
+      <td>1.279917</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Nebraska</td>
+      <td>6500</td>
+      <td>NE</td>
+      <td>0.593729</td>
+      <td>1925614</td>
+      <td>3.375547</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Oklahoma</td>
+      <td>5938</td>
+      <td>OK</td>
+      <td>0.542395</td>
+      <td>3940235</td>
+      <td>1.507017</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Utah</td>
+      <td>5723</td>
+      <td>UT</td>
+      <td>0.522756</td>
+      <td>3153550</td>
+      <td>1.814780</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Kansas</td>
+      <td>5630</td>
+      <td>KS</td>
+      <td>0.514261</td>
+      <td>2911359</td>
+      <td>1.933805</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Iowa</td>
+      <td>5484</td>
+      <td>IA</td>
+      <td>0.500925</td>
+      <td>3148618</td>
+      <td>1.741717</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Hawaii</td>
+      <td>5430</td>
+      <td>HI</td>
+      <td>0.495992</td>
+      <td>1420593</td>
+      <td>3.822347</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>South Carolina</td>
+      <td>5078</td>
+      <td>SC</td>
+      <td>0.463840</td>
+      <td>5084156</td>
+      <td>0.998789</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Louisiana</td>
+      <td>4889</td>
+      <td>LA</td>
+      <td>0.446576</td>
+      <td>4659690</td>
+      <td>1.049211</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Rhode Island</td>
+      <td>4336</td>
+      <td>RI</td>
+      <td>0.396063</td>
+      <td>1058287</td>
+      <td>4.097187</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>New Mexico</td>
+      <td>4296</td>
+      <td>NM</td>
+      <td>0.392409</td>
+      <td>2092741</td>
+      <td>2.052810</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>3737</td>
+      <td>AL</td>
+      <td>0.341349</td>
+      <td>4887681</td>
+      <td>0.764575</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Puerto Rico</td>
+      <td>3062</td>
+      <td>PR</td>
+      <td>0.279692</td>
+      <td>3193354</td>
+      <td>0.958866</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>3000</td>
+      <td>AR</td>
+      <td>0.274029</td>
+      <td>3009733</td>
+      <td>0.996766</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>District of Columbia</td>
+      <td>2775</td>
+      <td>DC</td>
+      <td>0.253477</td>
+      <td>701547</td>
+      <td>3.955544</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Idaho</td>
+      <td>2728</td>
+      <td>ID</td>
+      <td>0.249184</td>
+      <td>1750536</td>
+      <td>1.558380</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>New Hampshire</td>
+      <td>2200</td>
+      <td>NH</td>
+      <td>0.200955</td>
+      <td>1353465</td>
+      <td>1.625458</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Delaware</td>
+      <td>1831</td>
+      <td>DE</td>
+      <td>0.167249</td>
+      <td>965479</td>
+      <td>1.896468</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Maine</td>
+      <td>1749</td>
+      <td>ME</td>
+      <td>0.159759</td>
+      <td>1339057</td>
+      <td>1.306143</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>North Dakota</td>
+      <td>1674</td>
+      <td>ND</td>
+      <td>0.152908</td>
+      <td>758080</td>
+      <td>2.208210</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Mississippi</td>
+      <td>1643</td>
+      <td>MS</td>
+      <td>0.150076</td>
+      <td>2981020</td>
+      <td>0.551154</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>1375</td>
+      <td>AK</td>
+      <td>0.125597</td>
+      <td>735139</td>
+      <td>1.870395</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>South Dakota</td>
+      <td>1132</td>
+      <td>SD</td>
+      <td>0.103400</td>
+      <td>878698</td>
+      <td>1.288270</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Vermont</td>
+      <td>824</td>
+      <td>VT</td>
+      <td>0.075267</td>
+      <td>624358</td>
+      <td>1.319756</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>West Virginia</td>
+      <td>675</td>
+      <td>WV</td>
+      <td>0.061657</td>
+      <td>1804291</td>
+      <td>0.374108</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Montana</td>
+      <td>565</td>
+      <td>MT</td>
+      <td>0.051609</td>
+      <td>1060665</td>
+      <td>0.532685</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Wyoming</td>
+      <td>409</td>
+      <td>WY</td>
+      <td>0.037359</td>
+      <td>577601</td>
+      <td>0.708101</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Mapping">Mapping<a class="anchor-link" href="#Mapping">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="New-LPRs-by-state-of-residence-in-2018">New LPRs by state of residence in 2018<a class="anchor-link" href="#New-LPRs-by-state-of-residence-in-2018">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>First, we want to represent the number of new LPRs by state of residence in 2018 :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span><span class="n">df_LPRs_2018</span><span class="p">,</span> 
+                    <span class="n">locations</span><span class="o">=</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">,</span>
+                    <span class="n">hover_name</span><span class="o">=</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">,</span>
+                    <span class="n">locationmode</span><span class="o">=</span><span class="s2">&quot;USA-states&quot;</span><span class="p">,</span>
+                    <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;usa&#39;</span><span class="p">,</span>
+                    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">:</span><span class="s1">&#39;New LPRs&#39;</span><span class="p">},</span>
+                    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">sequential</span><span class="o">.</span><span class="n">dense</span><span class="p">,</span>
+                    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;U.S. New LPRs by State of Residence in 2018&lt;/b&gt;&lt;br&gt;&quot;</span> <span class="o">+</span> 
+                    <span class="s2">&quot;&lt;i&gt;Source : U.S. Department of Homeland Security&lt;/i&gt;&quot;</span>
+                   <span class="p">)</span>
+
+<span class="c1"># Style</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span>
+    <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">title_font_size</span><span class="o">=</span><span class="mi">18</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+        <script type="text/javascript">
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (typeof require !== 'undefined') {
+        require.undef("plotly");
+        requirejs.config({
+            paths: {
+                'plotly': ['https://cdn.plot.ly/plotly-latest.min']
+            }
+        });
+        require(['plotly'], function(Plotly) {
+            window._Plotly = Plotly;
+        });
+        }
+        </script>
+        
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>                            <div id="e3e8c4d0-dbe8-4671-8906-193f739b9ee7" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e3e8c4d0-dbe8-4671-8906-193f739b9ee7")) {                    Plotly.newPlot(                        "e3e8c4d0-dbe8-4671-8906-193f739b9ee7",                        [{"coloraxis": "coloraxis", "geo": "geo", "hovertemplate": "<b>%{hovertext}</b><br><br>Code=%{location}<br>New LPRs=%{z}<extra></extra>", "hovertext": ["California", "New York", "Florida", "Texas", "New Jersey", "Illinois", "Massachusetts", "Virginia", "Georgia", "Pennsylvania", "Washington", "Maryland", "North Carolina", "Michigan", "Ohio", "Arizona", "Minnesota", "Colorado", "Connecticut", "Nevada", "Indiana", "Oregon", "Tennessee", "Kentucky", "Missouri", "Wisconsin", "Nebraska", "Oklahoma", "Utah", "Kansas", "Iowa", "Hawaii", "South Carolina", "Louisiana", "Rhode Island", "New Mexico", "Alabama", "Puerto Rico", "Arkansas", "District of Columbia", "Idaho", "New Hampshire", "Delaware", "Maine", "North Dakota", "Mississippi", "Alaska", "South Dakota", "Vermont", "West Virginia", "Montana", "Wyoming"], "locationmode": "USA-states", "locations": ["CA", "NY", "FL", "TX", "NJ", "IL", "MA", "VA", "GA", "PA", "WA", "MD", "NC", "MI", "OH", "AZ", "MN", "CO", "CT", "NV", "IN", "OR", "TN", "KY", "MO", "WI", "NE", "OK", "UT", "KS", "IA", "HI", "SC", "LA", "RI", "NM", "AL", "PR", "AR", "DC", "ID", "NH", "DE", "ME", "ND", "MS", "AK", "SD", "VT", "WV", "MT", "WY"], "name": "", "type": "choropleth", "z": [200897, 134839, 130405, 104515, 54424, 38287, 33174, 27426, 26725, 26078, 26029, 24301, 20838, 19850, 18809, 18335, 16721, 13913, 11629, 10851, 9741, 9679, 9590, 8734, 7638, 7433, 6500, 5938, 5723, 5630, 5484, 5430, 5078, 4889, 4336, 4296, 3737, 3062, 3000, 2775, 2728, 2200, 1831, 1749, 1674, 1643, 1375, 1132, 824, 675, 565, 409]}],                        {"coloraxis": {"colorbar": {"title": {"text": "New LPRs"}}, "colorscale": [[0.0, "rgb(230, 240, 240)"], [0.09090909090909091, "rgb(191, 221, 229)"], [0.18181818181818182, "rgb(156, 201, 226)"], [0.2727272727272727, "rgb(129, 180, 227)"], [0.36363636363636365, "rgb(115, 154, 228)"], [0.45454545454545453, "rgb(117, 127, 221)"], [0.5454545454545454, "rgb(120, 100, 202)"], [0.6363636363636364, "rgb(119, 74, 175)"], [0.7272727272727273, "rgb(113, 50, 141)"], [0.8181818181818182, "rgb(100, 31, 104)"], [0.9090909090909091, "rgb(80, 20, 66)"], [1.0, "rgb(54, 14, 36)"]]}, "font": {"color": "grey", "family": "Helvetica", "size": 12}, "geo": {"center": {}, "domain": {"x": [0.0, 1.0], "y": [0.0, 1.0]}, "scope": "usa"}, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"size": 18}, "text": "<b>U.S. New LPRs by State of Residence in 2018</b><br><i>Source : U.S. Department of Homeland Security</i>"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('e3e8c4d0-dbe8-4671-8906-193f739b9ee7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">treemap</span><span class="p">(</span><span class="n">df_LPRs_2018</span><span class="p">,</span>
+                 <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;U.S. New LPRs by State of Residence in 2018&lt;/b&gt;&lt;br&gt;&quot;</span> <span class="o">+</span> 
+                 <span class="s2">&quot;&lt;i&gt;Source : U.S. Department of Homeland Security&lt;/i&gt;&quot;</span><span class="p">,</span>
+                 <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">:</span><span class="s1">&#39;New LPRs&#39;</span><span class="p">,</span> <span class="s1">&#39;State or territory of residence&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">},</span>
+                 <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">],</span> 
+                 <span class="n">values</span><span class="o">=</span><span class="s1">&#39;LPRs 2018&#39;</span><span class="p">,</span>
+                 <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;LPRs 2018&#39;</span><span class="p">,</span>
+                 <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">sequential</span><span class="o">.</span><span class="n">dense</span>
+                <span class="p">)</span>
+
+<span class="c1"># Style</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span>
+    <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">title_font_size</span><span class="o">=</span><span class="mi">18</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>                            <div id="473a017a-d4cd-4d6e-b81f-8e9fcbe86dfb" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("473a017a-d4cd-4d6e-b81f-8e9fcbe86dfb")) {                    Plotly.newPlot(                        "473a017a-d4cd-4d6e-b81f-8e9fcbe86dfb",                        [{"branchvalues": "total", "customdata": [[3737], [1375], [18335], [3000], [200897], [13913], [11629], [1831], [2775], [130405], [26725], [5430], [2728], [38287], [9741], [5484], [5630], [8734], [4889], [1749], [24301], [33174], [19850], [16721], [1643], [7638], [565], [6500], [10851], [2200], [54424], [4296], [134839], [20838], [1674], [18809], [5938], [9679], [26078], [3062], [4336], [5078], [1132], [9590], [104515], [5723], [824], [27426], [26029], [675], [7433], [409]], "domain": {"x": [0.0, 1.0], "y": [0.0, 1.0]}, "hovertemplate": "labels=%{label}<br>LPRs 2018_sum=%{value}<br>parent=%{parent}<br>id=%{id}<br>New LPRs=%{color}<extra></extra>", "ids": ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"], "labels": ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"], "marker": {"coloraxis": "coloraxis", "colors": [3737, 1375, 18335, 3000, 200897, 13913, 11629, 1831, 2775, 130405, 26725, 5430, 2728, 38287, 9741, 5484, 5630, 8734, 4889, 1749, 24301, 33174, 19850, 16721, 1643, 7638, 565, 6500, 10851, 2200, 54424, 4296, 134839, 20838, 1674, 18809, 5938, 9679, 26078, 3062, 4336, 5078, 1132, 9590, 104515, 5723, 824, 27426, 26029, 675, 7433, 409]}, "name": "", "parents": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], "type": "treemap", "values": [3737, 1375, 18335, 3000, 200897, 13913, 11629, 1831, 2775, 130405, 26725, 5430, 2728, 38287, 9741, 5484, 5630, 8734, 4889, 1749, 24301, 33174, 19850, 16721, 1643, 7638, 565, 6500, 10851, 2200, 54424, 4296, 134839, 20838, 1674, 18809, 5938, 9679, 26078, 3062, 4336, 5078, 1132, 9590, 104515, 5723, 824, 27426, 26029, 675, 7433, 409]}],                        {"coloraxis": {"colorbar": {"title": {"text": "New LPRs"}}, "colorscale": [[0.0, "rgb(230, 240, 240)"], [0.09090909090909091, "rgb(191, 221, 229)"], [0.18181818181818182, "rgb(156, 201, 226)"], [0.2727272727272727, "rgb(129, 180, 227)"], [0.36363636363636365, "rgb(115, 154, 228)"], [0.45454545454545453, "rgb(117, 127, 221)"], [0.5454545454545454, "rgb(120, 100, 202)"], [0.6363636363636364, "rgb(119, 74, 175)"], [0.7272727272727273, "rgb(113, 50, 141)"], [0.8181818181818182, "rgb(100, 31, 104)"], [0.9090909090909091, "rgb(80, 20, 66)"], [1.0, "rgb(54, 14, 36)"]]}, "font": {"color": "grey", "family": "Helvetica", "size": 12}, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"size": 18}, "text": "<b>U.S. New LPRs by State of Residence in 2018</b><br><i>Source : U.S. Department of Homeland Security</i>"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('473a017a-d4cd-4d6e-b81f-8e9fcbe86dfb');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="New-LPRs-by-state-of-residence-per-1,000-population-in-2018">New LPRs by state of residence per 1,000 population in 2018<a class="anchor-link" href="#New-LPRs-by-state-of-residence-per-1,000-population-in-2018">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, we want to represent the number of new LPRs by state of residence per 1,000 population in 2018 :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_LPRs_1000_population</span> <span class="o">=</span> <span class="n">df_LPRs_2018</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">df_LPRs_1000_population</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State or territory of residence</th>
+      <th>LPRs 2018</th>
+      <th>Code</th>
+      <th>Percentage of LPRs 2018</th>
+      <th>US Population 2018</th>
+      <th>LPRs 2018 per 1,000 population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>32</th>
+      <td>New York</td>
+      <td>134839</td>
+      <td>NY</td>
+      <td>12.316595</td>
+      <td>19530351</td>
+      <td>6.904075</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Florida</td>
+      <td>130405</td>
+      <td>FL</td>
+      <td>11.911580</td>
+      <td>21244317</td>
+      <td>6.138347</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>New Jersey</td>
+      <td>54424</td>
+      <td>NJ</td>
+      <td>4.971250</td>
+      <td>8886025</td>
+      <td>6.124673</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>200897</td>
+      <td>CA</td>
+      <td>18.350529</td>
+      <td>39461588</td>
+      <td>5.090951</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Massachusetts</td>
+      <td>33174</td>
+      <td>MA</td>
+      <td>3.030212</td>
+      <td>6882635</td>
+      <td>4.819956</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Rhode Island</td>
+      <td>4336</td>
+      <td>RI</td>
+      <td>0.396063</td>
+      <td>1058287</td>
+      <td>4.097187</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Maryland</td>
+      <td>24301</td>
+      <td>MD</td>
+      <td>2.219726</td>
+      <td>6035802</td>
+      <td>4.026143</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>District of Columbia</td>
+      <td>2775</td>
+      <td>DC</td>
+      <td>0.253477</td>
+      <td>701547</td>
+      <td>3.955544</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Hawaii</td>
+      <td>5430</td>
+      <td>HI</td>
+      <td>0.495992</td>
+      <td>1420593</td>
+      <td>3.822347</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Texas</td>
+      <td>104515</td>
+      <td>TX</td>
+      <td>9.546711</td>
+      <td>28628666</td>
+      <td>3.650711</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Nevada</td>
+      <td>10851</td>
+      <td>NV</td>
+      <td>0.991163</td>
+      <td>3027341</td>
+      <td>3.584334</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Washington</td>
+      <td>26029</td>
+      <td>WA</td>
+      <td>2.377566</td>
+      <td>7523869</td>
+      <td>3.459523</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Nebraska</td>
+      <td>6500</td>
+      <td>NE</td>
+      <td>0.593729</td>
+      <td>1925614</td>
+      <td>3.375547</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Connecticut</td>
+      <td>11629</td>
+      <td>CT</td>
+      <td>1.062227</td>
+      <td>3571520</td>
+      <td>3.256037</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Virginia</td>
+      <td>27426</td>
+      <td>VA</td>
+      <td>2.505172</td>
+      <td>8501286</td>
+      <td>3.226100</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Illinois</td>
+      <td>38287</td>
+      <td>IL</td>
+      <td>3.497248</td>
+      <td>12723071</td>
+      <td>3.009258</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Minnesota</td>
+      <td>16721</td>
+      <td>MN</td>
+      <td>1.527346</td>
+      <td>5606249</td>
+      <td>2.982565</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>18335</td>
+      <td>AZ</td>
+      <td>1.674773</td>
+      <td>7158024</td>
+      <td>2.561461</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Georgia</td>
+      <td>26725</td>
+      <td>GA</td>
+      <td>2.441141</td>
+      <td>10511131</td>
+      <td>2.542543</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Colorado</td>
+      <td>13913</td>
+      <td>CO</td>
+      <td>1.270855</td>
+      <td>5691287</td>
+      <td>2.444614</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Oregon</td>
+      <td>9679</td>
+      <td>OR</td>
+      <td>0.884109</td>
+      <td>4181886</td>
+      <td>2.314506</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>North Dakota</td>
+      <td>1674</td>
+      <td>ND</td>
+      <td>0.152908</td>
+      <td>758080</td>
+      <td>2.208210</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>New Mexico</td>
+      <td>4296</td>
+      <td>NM</td>
+      <td>0.392409</td>
+      <td>2092741</td>
+      <td>2.052810</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Pennsylvania</td>
+      <td>26078</td>
+      <td>PA</td>
+      <td>2.382042</td>
+      <td>12800922</td>
+      <td>2.037197</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>North Carolina</td>
+      <td>20838</td>
+      <td>NC</td>
+      <td>1.903405</td>
+      <td>10381615</td>
+      <td>2.007202</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Michigan</td>
+      <td>19850</td>
+      <td>MI</td>
+      <td>1.813158</td>
+      <td>9984072</td>
+      <td>1.988167</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Kentucky</td>
+      <td>8734</td>
+      <td>KY</td>
+      <td>0.797790</td>
+      <td>4461153</td>
+      <td>1.957790</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Kansas</td>
+      <td>5630</td>
+      <td>KS</td>
+      <td>0.514261</td>
+      <td>2911359</td>
+      <td>1.933805</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Delaware</td>
+      <td>1831</td>
+      <td>DE</td>
+      <td>0.167249</td>
+      <td>965479</td>
+      <td>1.896468</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>1375</td>
+      <td>AK</td>
+      <td>0.125597</td>
+      <td>735139</td>
+      <td>1.870395</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Utah</td>
+      <td>5723</td>
+      <td>UT</td>
+      <td>0.522756</td>
+      <td>3153550</td>
+      <td>1.814780</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Iowa</td>
+      <td>5484</td>
+      <td>IA</td>
+      <td>0.500925</td>
+      <td>3148618</td>
+      <td>1.741717</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>New Hampshire</td>
+      <td>2200</td>
+      <td>NH</td>
+      <td>0.200955</td>
+      <td>1353465</td>
+      <td>1.625458</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Ohio</td>
+      <td>18809</td>
+      <td>OH</td>
+      <td>1.718070</td>
+      <td>11676341</td>
+      <td>1.610864</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Idaho</td>
+      <td>2728</td>
+      <td>ID</td>
+      <td>0.249184</td>
+      <td>1750536</td>
+      <td>1.558380</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Oklahoma</td>
+      <td>5938</td>
+      <td>OK</td>
+      <td>0.542395</td>
+      <td>3940235</td>
+      <td>1.507017</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Indiana</td>
+      <td>9741</td>
+      <td>IN</td>
+      <td>0.889772</td>
+      <td>6695497</td>
+      <td>1.454858</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Tennessee</td>
+      <td>9590</td>
+      <td>TN</td>
+      <td>0.875979</td>
+      <td>6771631</td>
+      <td>1.416202</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Vermont</td>
+      <td>824</td>
+      <td>VT</td>
+      <td>0.075267</td>
+      <td>624358</td>
+      <td>1.319756</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Maine</td>
+      <td>1749</td>
+      <td>ME</td>
+      <td>0.159759</td>
+      <td>1339057</td>
+      <td>1.306143</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>South Dakota</td>
+      <td>1132</td>
+      <td>SD</td>
+      <td>0.103400</td>
+      <td>878698</td>
+      <td>1.288270</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Wisconsin</td>
+      <td>7433</td>
+      <td>WI</td>
+      <td>0.678952</td>
+      <td>5807406</td>
+      <td>1.279917</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Missouri</td>
+      <td>7638</td>
+      <td>MO</td>
+      <td>0.697678</td>
+      <td>6121623</td>
+      <td>1.247708</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Louisiana</td>
+      <td>4889</td>
+      <td>LA</td>
+      <td>0.446576</td>
+      <td>4659690</td>
+      <td>1.049211</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>South Carolina</td>
+      <td>5078</td>
+      <td>SC</td>
+      <td>0.463840</td>
+      <td>5084156</td>
+      <td>0.998789</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>3000</td>
+      <td>AR</td>
+      <td>0.274029</td>
+      <td>3009733</td>
+      <td>0.996766</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Puerto Rico</td>
+      <td>3062</td>
+      <td>PR</td>
+      <td>0.279692</td>
+      <td>3193354</td>
+      <td>0.958866</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>3737</td>
+      <td>AL</td>
+      <td>0.341349</td>
+      <td>4887681</td>
+      <td>0.764575</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Wyoming</td>
+      <td>409</td>
+      <td>WY</td>
+      <td>0.037359</td>
+      <td>577601</td>
+      <td>0.708101</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Mississippi</td>
+      <td>1643</td>
+      <td>MS</td>
+      <td>0.150076</td>
+      <td>2981020</td>
+      <td>0.551154</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Montana</td>
+      <td>565</td>
+      <td>MT</td>
+      <td>0.051609</td>
+      <td>1060665</td>
+      <td>0.532685</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>West Virginia</td>
+      <td>675</td>
+      <td>WV</td>
+      <td>0.061657</td>
+      <td>1804291</td>
+      <td>0.374108</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">choropleth</span><span class="p">(</span><span class="n">df_LPRs_1000_population</span><span class="p">,</span> 
+                    <span class="n">locations</span><span class="o">=</span><span class="s1">&#39;Code&#39;</span><span class="p">,</span>
+                    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">,</span>
+                    <span class="n">hover_name</span><span class="o">=</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">,</span>
+                    <span class="n">locationmode</span><span class="o">=</span><span class="s2">&quot;USA-states&quot;</span><span class="p">,</span>
+                    <span class="n">scope</span><span class="o">=</span><span class="s1">&#39;usa&#39;</span><span class="p">,</span>
+                    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">:</span><span class="s1">&#39;New LPRs per&lt;br&gt;1,000 inhabitants&#39;</span><span class="p">},</span>
+                    <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">sequential</span><span class="o">.</span><span class="n">matter</span><span class="p">,</span>
+                    <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;U.S. New LPRs by State of Residence per 1,000 inhabitants in 2018&lt;/b&gt;&lt;br&gt;&quot;</span> <span class="o">+</span> 
+                    <span class="s2">&quot;&lt;i&gt;Source : U.S. Department of Homeland Security&lt;/i&gt;&quot;</span>
+                   <span class="p">)</span>
+
+<span class="c1"># Style</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span>
+    <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">title_font_size</span><span class="o">=</span><span class="mi">18</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>                            <div id="f1a2267e-7547-4f3e-a866-c6ca6b4e89ae" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("f1a2267e-7547-4f3e-a866-c6ca6b4e89ae")) {                    Plotly.newPlot(                        "f1a2267e-7547-4f3e-a866-c6ca6b4e89ae",                        [{"coloraxis": "coloraxis", "geo": "geo", "hovertemplate": "<b>%{hovertext}</b><br><br>Code=%{location}<br>New LPRs per<br>1,000 inhabitants=%{z}<extra></extra>", "hovertext": ["New York", "Florida", "New Jersey", "California", "Massachusetts", "Rhode Island", "Maryland", "District of Columbia", "Hawaii", "Texas", "Nevada", "Washington", "Nebraska", "Connecticut", "Virginia", "Illinois", "Minnesota", "Arizona", "Georgia", "Colorado", "Oregon", "North Dakota", "New Mexico", "Pennsylvania", "North Carolina", "Michigan", "Kentucky", "Kansas", "Delaware", "Alaska", "Utah", "Iowa", "New Hampshire", "Ohio", "Idaho", "Oklahoma", "Indiana", "Tennessee", "Vermont", "Maine", "South Dakota", "Wisconsin", "Missouri", "Louisiana", "South Carolina", "Arkansas", "Puerto Rico", "Alabama", "Wyoming", "Mississippi", "Montana", "West Virginia"], "locationmode": "USA-states", "locations": ["NY", "FL", "NJ", "CA", "MA", "RI", "MD", "DC", "HI", "TX", "NV", "WA", "NE", "CT", "VA", "IL", "MN", "AZ", "GA", "CO", "OR", "ND", "NM", "PA", "NC", "MI", "KY", "KS", "DE", "AK", "UT", "IA", "NH", "OH", "ID", "OK", "IN", "TN", "VT", "ME", "SD", "WI", "MO", "LA", "SC", "AR", "PR", "AL", "WY", "MS", "MT", "WV"], "name": "", "type": "choropleth", "z": [6.904074586268316, 6.13834749312016, 6.124673293176645, 5.09095072403067, 4.819956310337538, 4.0971872469377395, 4.026142673334878, 3.955543962129408, 3.8223474281514833, 3.6507114931586404, 3.5843335785430184, 3.4595232851608664, 3.375546708738096, 3.2560366454618763, 3.2261001453191906, 3.0092577491707777, 2.982564634571172, 2.561461095967267, 2.5425427577679316, 2.444614021397972, 2.3145059430123154, 2.208210215280709, 2.052810166188745, 2.0371970081530066, 2.0072021549633656, 1.9881667520025894, 1.9577898359459989, 1.9338047970037362, 1.8964679708207013, 1.8703945784402678, 1.8147801683816651, 1.7417165245196464, 1.6254576217338461, 1.6108642253596397, 1.5583798333767487, 1.5070167134701358, 1.4548583921402698, 1.4162023890551627, 1.3197556530067687, 1.3061430544032104, 1.2882696899275974, 1.279917402020799, 1.2477083283305752, 1.049211428228058, 0.9987891795609735, 0.9967661583270011, 0.9588664457495161, 0.7645752658571621, 0.7081012671376954, 0.5511536319783161, 0.5326846836654363, 0.3741081676957874]}],                        {"coloraxis": {"colorbar": {"title": {"text": "New LPRs per<br>1,000 inhabitants"}}, "colorscale": [[0.0, "rgb(253, 237, 176)"], [0.09090909090909091, "rgb(250, 205, 145)"], [0.18181818181818182, "rgb(246, 173, 119)"], [0.2727272727272727, "rgb(240, 142, 98)"], [0.36363636363636365, "rgb(231, 109, 84)"], [0.45454545454545453, "rgb(216, 80, 83)"], [0.5454545454545454, "rgb(195, 56, 90)"], [0.6363636363636364, "rgb(168, 40, 96)"], [0.7272727272727273, "rgb(138, 29, 99)"], [0.8181818181818182, "rgb(107, 24, 93)"], [0.9090909090909091, "rgb(76, 21, 80)"], [1.0, "rgb(47, 15, 61)"]]}, "font": {"color": "grey", "family": "Helvetica", "size": 12}, "geo": {"center": {}, "domain": {"x": [0.0, 1.0], "y": [0.0, 1.0]}, "scope": "usa"}, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"size": 18}, "text": "<b>U.S. New LPRs by State of Residence per 1,000 inhabitants in 2018</b><br><i>Source : U.S. Department of Homeland Security</i>"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('f1a2267e-7547-4f3e-a866-c6ca6b4e89ae');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">treemap</span><span class="p">(</span><span class="n">df_LPRs_1000_population</span><span class="p">,</span>
+                 <span class="n">title</span><span class="o">=</span><span class="s2">&quot;&lt;b&gt;U.S. New LPRs by State of Residence per 1,000 inhabitants in 2018&lt;/b&gt;&lt;br&gt;&quot;</span> <span class="o">+</span> 
+                 <span class="s2">&quot;&lt;i&gt;Source : U.S. Department of Homeland Security&lt;/i&gt;&quot;</span><span class="p">,</span>
+                 <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">:</span><span class="s1">&#39;New LPRs per&lt;br&gt;1,000 inhabitants&#39;</span><span class="p">,</span> <span class="s1">&#39;State or territory of residence&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">},</span>
+                 <span class="n">path</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;State or territory of residence&#39;</span><span class="p">],</span> 
+                 <span class="n">values</span><span class="o">=</span><span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">,</span>
+                 <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;LPRs 2018 per 1,000 population&#39;</span><span class="p">,</span>
+                 <span class="n">color_continuous_scale</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">sequential</span><span class="o">.</span><span class="n">matter</span>
+                <span class="p">)</span>
+
+<span class="c1"># Style</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">font_family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span>
+    <span class="n">font_color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span>
+    <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
+    <span class="n">title_font_size</span><span class="o">=</span><span class="mi">18</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>                            <div id="75967b24-b892-4c85-b099-1db7a8082ca7" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("75967b24-b892-4c85-b099-1db7a8082ca7")) {                    Plotly.newPlot(                        "75967b24-b892-4c85-b099-1db7a8082ca7",                        [{"branchvalues": "total", "customdata": [[0.7645752658571622], [1.8703945784402678], [2.561461095967267], [0.9967661583270011], [5.09095072403067], [2.444614021397972], [3.2560366454618763], [1.8964679708207013], [3.955543962129408], [6.138347493120161], [2.5425427577679316], [3.8223474281514833], [1.5583798333767487], [3.0092577491707777], [1.4548583921402696], [1.7417165245196464], [1.9338047970037362], [1.9577898359459989], [1.049211428228058], [1.3061430544032104], [4.026142673334878], [4.819956310337538], [1.9881667520025894], [2.982564634571172], [0.5511536319783161], [1.2477083283305752], [0.5326846836654363], [3.375546708738096], [3.5843335785430184], [1.6254576217338461], [6.124673293176644], [2.052810166188745], [6.904074586268316], [2.0072021549633656], [2.208210215280709], [1.6108642253596397], [1.5070167134701358], [2.3145059430123154], [2.0371970081530066], [0.9588664457495161], [4.0971872469377395], [0.9987891795609735], [1.2882696899275974], [1.4162023890551627], [3.650711493158641], [1.8147801683816651], [1.3197556530067687], [3.2261001453191906], [3.4595232851608664], [0.3741081676957875], [1.279917402020799], [0.7081012671376954]], "domain": {"x": [0.0, 1.0], "y": [0.0, 1.0]}, "hovertemplate": "labels=%{label}<br>LPRs 2018 per 1,000 population_sum=%{value}<br>parent=%{parent}<br>id=%{id}<br>New LPRs per<br>1,000 inhabitants=%{color}<extra></extra>", "ids": ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"], "labels": ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"], "marker": {"coloraxis": "coloraxis", "colors": [0.7645752658571622, 1.8703945784402678, 2.561461095967267, 0.9967661583270011, 5.09095072403067, 2.444614021397972, 3.2560366454618763, 1.8964679708207013, 3.955543962129408, 6.138347493120161, 2.5425427577679316, 3.8223474281514833, 1.5583798333767487, 3.0092577491707777, 1.4548583921402696, 1.7417165245196464, 1.9338047970037362, 1.9577898359459989, 1.049211428228058, 1.3061430544032104, 4.026142673334878, 4.819956310337538, 1.9881667520025894, 2.982564634571172, 0.5511536319783161, 1.2477083283305752, 0.5326846836654363, 3.375546708738096, 3.5843335785430184, 1.6254576217338461, 6.124673293176644, 2.052810166188745, 6.904074586268316, 2.0072021549633656, 2.208210215280709, 1.6108642253596397, 1.5070167134701358, 2.3145059430123154, 2.0371970081530066, 0.9588664457495161, 4.0971872469377395, 0.9987891795609735, 1.2882696899275974, 1.4162023890551627, 3.650711493158641, 1.8147801683816651, 1.3197556530067687, 3.2261001453191906, 3.4595232851608664, 0.3741081676957875, 1.279917402020799, 0.7081012671376954]}, "name": "", "parents": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""], "type": "treemap", "values": [0.7645752658571621, 1.8703945784402678, 2.561461095967267, 0.9967661583270011, 5.09095072403067, 2.444614021397972, 3.2560366454618763, 1.8964679708207013, 3.955543962129408, 6.13834749312016, 2.5425427577679316, 3.8223474281514833, 1.5583798333767487, 3.0092577491707777, 1.4548583921402698, 1.7417165245196464, 1.9338047970037362, 1.9577898359459989, 1.049211428228058, 1.3061430544032104, 4.026142673334878, 4.819956310337538, 1.9881667520025894, 2.982564634571172, 0.5511536319783161, 1.2477083283305752, 0.5326846836654363, 3.375546708738096, 3.5843335785430184, 1.6254576217338461, 6.124673293176645, 2.052810166188745, 6.904074586268316, 2.0072021549633656, 2.208210215280709, 1.6108642253596397, 1.5070167134701358, 2.3145059430123154, 2.0371970081530066, 0.9588664457495161, 4.0971872469377395, 0.9987891795609735, 1.2882696899275974, 1.4162023890551627, 3.6507114931586404, 1.8147801683816651, 1.3197556530067687, 3.2261001453191906, 3.4595232851608664, 0.3741081676957874, 1.279917402020799, 0.7081012671376954]}],                        {"coloraxis": {"colorbar": {"title": {"text": "New LPRs per<br>1,000 inhabitants"}}, "colorscale": [[0.0, "rgb(253, 237, 176)"], [0.09090909090909091, "rgb(250, 205, 145)"], [0.18181818181818182, "rgb(246, 173, 119)"], [0.2727272727272727, "rgb(240, 142, 98)"], [0.36363636363636365, "rgb(231, 109, 84)"], [0.45454545454545453, "rgb(216, 80, 83)"], [0.5454545454545454, "rgb(195, 56, 90)"], [0.6363636363636364, "rgb(168, 40, 96)"], [0.7272727272727273, "rgb(138, 29, 99)"], [0.8181818181818182, "rgb(107, 24, 93)"], [0.9090909090909091, "rgb(76, 21, 80)"], [1.0, "rgb(47, 15, 61)"]]}, "font": {"color": "grey", "family": "Helvetica", "size": 12}, "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "autotypenumbers": "strict", "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"font": {"size": 18}, "text": "<b>U.S. New LPRs by State of Residence per 1,000 inhabitants in 2018</b><br><i>Source : U.S. Department of Homeland Security</i>"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('75967b24-b892-4c85-b099-1db7a8082ca7');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sources">Sources<a class="anchor-link" href="#Sources">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><a href="https://www.dhs.gov/immigration-statistics">U.S. Department of Homeland Security</a></li>
+<li><a href="https://www.census.gov/">U.S. Census Bureau</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+    </div>
+
+    <div class="content tag-cloud">
+        <p>
+        </p>
+    </div>
+
+<div class="content neighbors">
+    <a class="pure-button float-left" href="https://notebooks.data-show.com/american-lawful-immigration-2018-new-lprs-by-country-of-birth/"
+        title="American Lawful Immigration 2018 : New LPRs by Country of Birth">
+        <i class="fa fa-angle-left"></i> Previous Post
+    </a>
+    <a class="pure-button float-right" href="https://notebooks.data-show.com/who-dominates-the-global-smartphone-market-in-2020/"
+        title="Who dominates the global smartphone market in 2020 ?">
+        Next Post <i class="fa fa-angle-right"></i>
+    </a>
+</div>
+
+</article>
+    </main>
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Data Show Notebooks ",
+  "url" : "https://notebooks.data-show.com",
+  "image": "",
+  "description": "Data Show makes data visualization notebooks with open data about economics and health topics."
+}
+</script>  <a href="https://github.com/data-show/notebooks" class="github-corner" aria-label="View source on Github">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+        style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path
+            d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+            fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm">
+        </path>
+        <path
+            d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+            fill="currentColor" class="octo-body">
+        </path>
+    </svg>
+</a>
+<style>
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+
+    @keyframes octocat-wave {
+
+        0%,
+        100% {
+            transform: rotate(0)
+        }
+
+        20%,
+        60% {
+            transform: rotate(-25deg)
+        }
+
+        40%,
+        80% {
+            transform: rotate(10deg)
+        }
+    }
+
+    @media (max-width:500px) {
+        .github-corner:hover .octo-arm {
+            animation: none
+        }
+
+        .github-corner .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+    }
+</style> </body>
+
+</html>
