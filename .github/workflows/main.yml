@@ -31,7 +31,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: ${{ env.PYTHON_VERSION }}
-          channels: conda-forge, plotly
+          channels: conda-forge,anaconda,plotly
           auto-activate-base: true
           activate-environment: true
 
