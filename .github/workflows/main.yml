@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-${{ env.PYTHON_VERSION }}-conda-${{ hashFiles('requirements.txt') }}
 
       - name: Install Conda Environment
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v3
         with:
           auto-update-conda: true
           python-version: ${{ env.PYTHON_VERSION }}
