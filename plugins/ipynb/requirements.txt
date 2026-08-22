@@ -1,5 +1,5 @@
 pelican==4.8.0
 jupyter
 nbconvert==7.7.4
-ipython==8.14.0
+ipython==9.16.1
 markdown==3.4.4
