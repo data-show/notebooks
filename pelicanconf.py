@@ -48,7 +48,7 @@ LINKS = ()
 SOCIAL = (('newspaper', 'https://www.data-show.com'),
           ('twitter', 'https://twitter.com/DataShow_'),
           ('instagram', 'https://www.instagram.com/datashow_'),
-          ('youtube', 'https://www.youtube.com/channel/UC1siUJqeSI3Zoyj02tw1jgA'),
+          ('youtube', 'https://www.youtube.com/@DataShowOfficial'),
           ('github', 'https://github.com/data-show'),
           ('linkedin', 'https://www.linkedin.com/company/data-show-blog'))
 
